@@ -1,0 +1,20 @@
+.arbol-container {
+  margin-bottom: 6px;
+
+  .arbol-input {
+    border: 1px solid #9373ED;
+    padding: 4px 8px;
+    border-radius: 2px;
+
+    input {
+      border: none;
+      outline: none;
+      width: 100%;
+      color: #6f3aa1;
+
+      &::placeholder{
+        color: #9563c4;
+      }
+    }
+  }
+}
