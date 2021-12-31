@@ -1,12 +1,16 @@
-button {
-  width: 100%;
-  background: #9373ED;
-  outline: none;
-  border: #9373ED;
-  color: #fff;
-  border-radius: 2px;
-  padding: 5px;
-  margin: 4px 0;
-  text-transform: uppercase;
-  font-weight: bold;
+.arbol-button{
+  margin: 12px 0;
+
+  button {
+    width: 100%;
+    background: #9373ED;
+    outline: none;
+    border: #9373ED;
+    color: #fff;
+    border-radius: 2px;
+    padding: 5px;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
 }
+

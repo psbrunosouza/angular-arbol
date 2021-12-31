@@ -1,12 +1,15 @@
 .arbol-container {
-  margin: 4px 0;
+  margin: 12px 0;
 
   .arbol-input {
+    display: flex;
+    align-items: center;
     border: 1px solid #9373ED;
     padding: 4px 8px;
     border-radius: 2px;
 
     input {
+      margin: 0 4px;
       border: none;
       outline: none;
       width: 100%;
