@@ -1,9 +1,26 @@
 <div class="page">
   <div class="image-side"></div>
   <div class="content-side row justify-content-center align-items-center">
-    <div class="col-6">
-      <arbol-input placeholder="E-mail" label="E-mail"></arbol-input>
-      <arbol-input placeholder="Password" type="password" label="Password"></arbol-input>
+    <div class="col-sm-8 col-md-6">
+      <div>
+        <ab-label color="#6f3aa1">
+          <div pre>
+            <ab-icon color="#6f3aa1" [icon]="'bi bi-envelope-fill'">
+            </ab-icon>
+          </div> E-mail
+        </ab-label>
+        <ab-input placeholder="E-mail"></ab-input>
+      </div>
+      <div>
+        <ab-label color="#6f3aa1">
+          <div pre>
+            <ab-icon color="#6f3aa1" [icon]="'bi bi-key-fill'"></ab-icon>
+          </div>
+          Password
+        </ab-label>
+        <ab-input placeholder="Password" type="password"></ab-input>
+      </div>
+      <ab-button>Login</ab-button>
     </div>
   </div>
 </div>

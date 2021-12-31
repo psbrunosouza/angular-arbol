@@ -1,13 +1,13 @@
 import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
-  selector: 'arbol-label',
+  selector: 'ab-label',
   templateUrl: './arbol-label.component.html',
   styleUrls: ['./arbol-label.component.scss']
 })
 export class ArbolLabelComponent implements OnInit {
 
-  @Input() public label: string;
+  @Input() public color: string = "#000";
 
   constructor() { }
 
