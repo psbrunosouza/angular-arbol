@@ -1,5 +1,8 @@
 import {Component, Input, OnInit} from '@angular/core';
 
+type TType = "button" | "submit";
+type TUse = "fill" | "link" | "outline";
+
 @Component({
   selector: 'ab-button',
   templateUrl: './arbol-button.component.html',
@@ -7,13 +10,19 @@ import {Component, Input, OnInit} from '@angular/core';
 })
 export class ArbolButtonComponent implements OnInit {
 
-  @Input() public type?: "button" | "submit" = "submit";
+  @Input() public type?: TType = "submit";
+
+  @Input() public use?: TUse = "fill";
 
   @Input() public background?: string;
 
-  @Input() public color?: string;
+  @Input() public borderColor?: string;
 
-  @Input() public use?: "button" | "link" | "outline" = "button";
+  @Input() public borderRadius?: number;
+
+  @Input() public borderWidth?: number;
+
+  @Input() public color?: string;
 
   constructor() { }
 
