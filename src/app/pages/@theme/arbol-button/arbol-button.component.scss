@@ -6,6 +6,7 @@
   button {
     width: 100%;
     border: 1px solid $primary;
+    background: $primary;
     outline: none;
     border: $primary;
     color: $text-secondary;
@@ -24,7 +25,7 @@
     width: 100%;
     outline: none;
     border: 1px solid $primary;
-    color: $text-secondary;
+    color: $text-primary;
     background: transparent !important;
     border-radius: 2px;
     text-transform: uppercase;
@@ -38,7 +39,7 @@
     width: 100%;
     outline: none;
     border: none;
-    color: $text-secondary;
+    color: $text-primary;
     background: transparent !important;
     text-transform: uppercase;
     font-weight: bold;

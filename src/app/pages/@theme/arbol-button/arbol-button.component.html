@@ -1,5 +1,10 @@
 <div
-  [ngClass]="{'arbol-button': use === 'button', 'arbol-outline' : use === 'outline', 'arbol-link': use === 'link'}"
+  [ngClass]="
+  {
+  'arbol-button': use === 'button',
+  'arbol-outline' : use === 'outline',
+  'arbol-link': use === 'link'
+  }"
 >
   <button
     [style.background]="use === 'button' && background"
