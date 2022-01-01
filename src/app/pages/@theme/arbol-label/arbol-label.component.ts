@@ -7,7 +7,7 @@ import {Component, Input, OnInit} from '@angular/core';
 })
 export class ArbolLabelComponent implements OnInit {
 
-  @Input() public color: string = "#000";
+  @Input() public color?: string;
 
   constructor() { }
 

@@ -9,7 +9,7 @@ export class ArbolInputComponent implements OnInit {
 
   @Input() public placeholder?: string;
 
-  @Input() public type?: string = "text";
+  @Input() public type: "text" | "email" | "password" = "text";
 
   constructor() {
   }
@@ -17,4 +17,15 @@ export class ArbolInputComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  public togglePassword(): void {
+    switch (this.type){
+      case "text":
+        this.type = "password";
+        break;
+
+      case "password":
+        this.type = "text";
+        break;
+    }
+  }
 }

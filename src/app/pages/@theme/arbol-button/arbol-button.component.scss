@@ -1,16 +1,48 @@
+@import "src/app/pages/@styles/base";
+
 .arbol-button{
   margin: 12px 0;
 
   button {
     width: 100%;
-    background: #9373ED;
+    border: 1px solid $primary;
     outline: none;
-    border: #9373ED;
-    color: #fff;
+    border: $primary;
+    color: $text-secondary;
     border-radius: 2px;
     padding: 5px;
     text-transform: uppercase;
     font-weight: bold;
   }
 }
+
+.arbol-outline {
+  margin: 12px 0;
+
+  button {
+    padding: 5px;
+    width: 100%;
+    outline: none;
+    border: 1px solid $primary;
+    color: $text-secondary;
+    background: transparent !important;
+    border-radius: 2px;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+}
+
+
+.arbol-link {
+  button {
+    width: 100%;
+    outline: none;
+    border: none;
+    color: $text-secondary;
+    background: transparent !important;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+}
+
 

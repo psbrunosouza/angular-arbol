@@ -7,7 +7,13 @@ import {Component, Input, OnInit} from '@angular/core';
 })
 export class ArbolButtonComponent implements OnInit {
 
-  @Input() public type?: string = "submit";
+  @Input() public type: string = "submit";
+
+  @Input() public background: string = "#9373ED";
+
+  @Input() public color: string = "#fff";
+
+  @Input() public use: "button" | "link" | "outline" = "button";
 
   constructor() { }
 

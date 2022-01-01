@@ -9,9 +9,9 @@ export class ArbolIconComponent implements OnInit {
 
   @Input() public icon: string;
 
-  @Input() public size: number = 16;
+  @Input() public size?: number = 16;
 
-  @Input() public color: string = "#000";
+  @Input() public color?: string;
 
   constructor() { }
 

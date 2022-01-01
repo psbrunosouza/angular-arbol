@@ -1,3 +1,5 @@
+@import "src/app/pages/@styles/base";
+
 .page {
   width: 100vw;
   height: 100vh;
@@ -6,12 +8,13 @@
   display: flex;
 
   .image-side {
-    background: #9373ED;
+    background: $primary;
     height: 100%;
     width: calc(100% - 720px);
   }
 
   .content-side {
+    background: $tertiary;
     height: 100%;
     width: 720px;
     padding: 12px;

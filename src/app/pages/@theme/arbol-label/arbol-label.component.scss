@@ -1,8 +1,10 @@
+@import "src/app/pages/@styles/base";
+
 label {
   display: flex;
+  color: $primary;
 
   .icon {
     margin: 0 4px;
-
   }
 }
