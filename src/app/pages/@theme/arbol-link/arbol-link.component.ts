@@ -1,4 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
+import {UrlTree} from "@angular/router";
 
 @Component({
   selector: 'ab-link',
@@ -7,7 +8,7 @@ import {Component, Input, OnInit} from '@angular/core';
 })
 export class ArbolLinkComponent implements OnInit {
 
-  @Input() public to: string;
+  @Input() public to: string | string[];
 
   constructor() { }
 

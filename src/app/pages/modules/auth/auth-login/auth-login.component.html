@@ -1,7 +1,6 @@
 <div class="page">
-  <div class="image-side"></div>
-  <div class="content-side row justify-content-center align-items-center">
-    <div class="form">
+  <div class="content-side row justify-content-center align-items-center p-0 m-0">
+    <div class="form col-md-3 col-sm-8">
       <div class="d-flex justify-content-center mb-3">
         <img width="64px" alt="" src="assets/imgs/arbol-icon.svg" />
       </div>
@@ -18,8 +17,8 @@
           </ab-button>
         </ab-input>
       </div>
-      <ab-button type="submit" use="fill">Login</ab-button>
-      <ab-link>Criar uma conta</ab-link>
+      <ab-button type="submit" use="fill">Acessar</ab-button>
+      <ab-link [to]="['../register']">Criar uma conta</ab-link>
     </div>
   </div>
 </div>

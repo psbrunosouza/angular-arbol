@@ -3,9 +3,9 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: 'user',
-    loadChildren: () => import('./pages/modules/user/user.module')
-      .then((module) => module.UserModule),
+    path: 'auth',
+    loadChildren: () => import('./pages/modules/auth/auth.module')
+      .then((module) => module.AuthModule),
   }
 ];
 
