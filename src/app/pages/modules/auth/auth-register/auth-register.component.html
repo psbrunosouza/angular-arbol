@@ -1,6 +1,6 @@
 <div class="page">
-  <div class="content-side row justify-content-center align-items-center p-0 m-0">
-    <div class="form col-md-3 col-sm-8">
+  <div class="content row justify-content-center align-items-center p-0 m-0">
+    <div class="form">
       <div class="d-flex justify-content-center mb-3">
         <img width="64px" alt="" src="assets/imgs/arbol-icon.svg" />
       </div>
@@ -18,9 +18,9 @@
         </ab-input>
       </div>
       <div>
-        <ab-input #passwordInput placeholder="Repetir a senha" type="password">
+        <ab-input #repeatPasswordInput placeholder="Repetir a senha" type="password">
           <ab-icon color="#9373ED" [icon]="'bi bi-key-fill'" pre></ab-icon>
-          <ab-button use="link" color="#6f3aa1" (click)="passwordInput.togglePassword()" pos>
+          <ab-button use="link" color="#6f3aa1" (click)="repeatPasswordInput.togglePassword()" pos>
             <ab-icon color="#9373ED" [icon]="passwordInput.type !== 'password' ? 'bi bi-eye-fill' : 'bi bi-eye-slash-fill'"></ab-icon>
           </ab-button>
         </ab-input>
