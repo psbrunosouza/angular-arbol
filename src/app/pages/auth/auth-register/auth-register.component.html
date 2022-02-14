@@ -2,7 +2,7 @@
   <div class="content row justify-content-center align-items-center p-0 m-0">
     <div class="form">
       <div class="d-flex justify-content-center mb-3">
-        <img width="64px" alt="" src="assets/imgs/arbol-icon.svg" />
+        <img width="64px" alt="" src="../../../../assets/imgs/arbol-icon.svg" />
       </div>
       <div>
         <ab-input placeholder="E-mail">
@@ -10,15 +10,23 @@
         </ab-input>
       </div>
       <div>
-        <ab-input #passwordInput placeholder="Password" type="password">
+        <ab-input #passwordInput placeholder="Senha" type="password">
           <ab-icon color="#9373ED" [icon]="'bi bi-key-fill'" pre></ab-icon>
           <ab-button use="link" color="#6f3aa1" (click)="passwordInput.togglePassword()" pos>
             <ab-icon color="#9373ED" [icon]="passwordInput.type !== 'password' ? 'bi bi-eye-fill' : 'bi bi-eye-slash-fill'"></ab-icon>
           </ab-button>
         </ab-input>
       </div>
-      <ab-button type="submit" use="fill">Acessar</ab-button>
-      <ab-link [to]="['../register']">Criar uma conta</ab-link>
+      <div>
+        <ab-input #repeatPasswordInput placeholder="Repetir a senha" type="password">
+          <ab-icon color="#9373ED" [icon]="'bi bi-key-fill'" pre></ab-icon>
+          <ab-button use="link" color="#6f3aa1" (click)="repeatPasswordInput.togglePassword()" pos>
+            <ab-icon color="#9373ED" [icon]="passwordInput.type !== 'password' ? 'bi bi-eye-fill' : 'bi bi-eye-slash-fill'"></ab-icon>
+          </ab-button>
+        </ab-input>
+      </div>
+      <ab-button type="submit" use="fill">Cadastrar</ab-button>
+      <ab-link [to]="['../login']">Já possuo uma conta</ab-link>
     </div>
   </div>
 </div>

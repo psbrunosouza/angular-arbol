@@ -6,6 +6,7 @@ import { ArbolButtonComponent } from './arbol-button/arbol-button.component';
 import { ArbolIconComponent } from './arbol-icon/arbol-icon.component';
 import { ArbolLinkComponent } from './arbol-link/arbol-link.component';
 import {RouterModule} from "@angular/router";
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import {RouterModule} from "@angular/router";
   ],
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    FormsModule
   ],
   exports: [
     ArbolInputComponent,

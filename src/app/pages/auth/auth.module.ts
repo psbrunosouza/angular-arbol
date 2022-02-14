@@ -5,6 +5,7 @@ import {AuthComponent} from "./auth.component";
 import { AuthLoginComponent } from './auth-login/auth-login.component';
 import { AuthRegisterComponent } from './auth-register/auth-register.component';
 import {ThemeModule} from "../../@theme/theme.module";
+import {FormsModule} from "@angular/forms";
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import {ThemeModule} from "../../@theme/theme.module";
   imports: [
     CommonModule,
     AuthRoutingModule,
-    ThemeModule
+    ThemeModule,
+    FormsModule
   ]
 })
 export class AuthModule { }
