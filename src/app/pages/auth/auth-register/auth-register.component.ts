@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {EnsureAuthenticateService} from "../../../@data/services/ensure-authenticate.service";
 
 @Component({
   selector: 'app-auth-register',
@@ -7,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AuthRegisterComponent implements OnInit {
 
-  constructor() { }
+  constructor(private ensureAuthenticateService: EnsureAuthenticateService) { }
 
   ngOnInit(): void {
+    this.ensureAuthenticateService.checkIsLogged('token');
   }
 
 }

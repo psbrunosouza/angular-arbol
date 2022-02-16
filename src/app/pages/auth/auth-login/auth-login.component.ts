@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import {UserModel} from "../../../@data/models/user.model";
 import {AuthService} from "../../../@data/services/auth.service";
 import {HttpClient} from "@angular/common/http";
+import {EnsureAuthenticateService} from "../../../@data/services/ensure-authenticate.service";
+import {Router} from "@angular/router";
 
 
 @Component({
@@ -13,15 +15,17 @@ import {HttpClient} from "@angular/common/http";
 export class AuthLoginComponent implements OnInit {
   user: UserModel;
 
-  constructor(private authService: AuthService) { }
+  constructor(private authService: AuthService, private ensureAuthenticateService: EnsureAuthenticateService, private router: Router) { }
 
   ngOnInit(): void {
     this.user = new UserModel();
+
+    this.ensureAuthenticateService.checkIsLogged('token');
   }
 
   submit(){
-    this.authService.auth(this.user).subscribe((res) => {
-      console.log(res)
+    this.authService.auth(this.user).subscribe((authData) => {
+      this.ensureAuthenticateService.setToken(authData, 'token');
     })
   }
 }

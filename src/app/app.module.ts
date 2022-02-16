@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import {ThemeModule} from "./@theme/theme.module";
 import {LayoutModule} from "./@layout/layout.module";
 import {HttpClientModule} from "@angular/common/http";
+import {EnsureAuthenticateService} from "./@data/services/ensure-authenticate.service";
 
 @NgModule({
   declarations: [
@@ -18,7 +19,7 @@ import {HttpClientModule} from "@angular/common/http";
     LayoutModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [EnsureAuthenticateService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
