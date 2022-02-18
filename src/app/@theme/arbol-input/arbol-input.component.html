@@ -1,0 +1,17 @@
+<div class="arbol-container">
+  <div class="arbol-input">
+    <ng-content select="[pre]"></ng-content>
+    <input
+      [required]="required"
+      [disabled]="disabled"
+      [type]="type"
+      [(ngModel)]="data"
+      [placeholder]="!!placeholder ? placeholder : ''"
+      [ngModelOptions]="{standalone: true}"
+      (input)="onChange()"
+      (change)="onChange()"
+      (blur)="onTouchedFn()"
+    />
+    <ng-content select="[pos]"></ng-content>
+  </div>
+</div>

@@ -1,0 +1,10 @@
+@import "../../@styles/base";
+
+label {
+  display: flex;
+  color: $primary;
+
+  .icon {
+    margin: 0 4px;
+  }
+}

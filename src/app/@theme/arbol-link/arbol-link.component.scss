@@ -1,0 +1,12 @@
+@import "../../@styles/base";
+
+.arbol-link {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  a {
+    color: $text-primary;
+    text-decoration: none;
+  }
+}

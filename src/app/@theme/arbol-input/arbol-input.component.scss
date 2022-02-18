@@ -1,0 +1,27 @@
+@import "../../@styles/base";
+
+.arbol-container {
+  margin: 12px 0;
+
+  .arbol-input {
+    display: flex;
+    align-items: center;
+    border: 1px solid $primary;
+    background: $white;
+    padding: 4px 8px;
+    border-radius: 2px;
+
+    input {
+      margin: 0 4px;
+      background: $white;
+      border: none;
+      outline: none;
+      width: 100%;
+      color: $primary;
+
+      &::placeholder{
+        color: $text-primary;
+      }
+    }
+  }
+}
