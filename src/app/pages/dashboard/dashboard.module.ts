@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { DashboardRoutingModule } from './dashboard-routing.module';
 import { DashboardComponent } from './dashboard.component';
 import { DiaryComponent } from './diary/diary.component';
+import {LayoutModule} from "../../@layout/layout.module";
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { DiaryComponent } from './diary/diary.component';
   ],
   imports: [
     CommonModule,
-    DashboardRoutingModule
+    DashboardRoutingModule,
+    LayoutModule
   ]
 })
 export class DashboardModule { }

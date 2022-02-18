@@ -14,4 +14,5 @@ export class AuthService implements IAuthService{
   auth(user: UserModel): Observable<AuthModel> {
     return this.http.post<AuthModel>(`${environment.baseUrl}${this.url}`, user);
   }
+
 }

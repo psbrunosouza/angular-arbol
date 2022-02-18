@@ -1,0 +1,10 @@
+<div class="sidebar">
+  <div class="sidebar-items">
+    <a *ngFor="let item of menuItems" [routerLink]="[item.link]">
+      <i [style.color]="item.color" [class]="item.icon"></i>
+    </a>
+  </div>
+  <a [routerLink]="[settingsItem.link]">
+    <i [style.color]="settingsItem.color" [class]="settingsItem.icon"></i>
+  </a>
+</div>

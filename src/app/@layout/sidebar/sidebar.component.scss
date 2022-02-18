@@ -1,0 +1,23 @@
+.sidebar {
+  width: 68px;
+  height: 100vh;
+  background: #9373ED;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+
+  .sidebar-items {
+    display: flex;
+    flex-direction: column;
+  }
+
+  a {
+    margin: 12px 0;
+    i {
+      font-size: 24px;
+    }
+  }
+
+}

@@ -3,14 +3,16 @@ import { CommonModule } from '@angular/common';
 
 import { LayoutComponent } from './layout.component';
 import {RouterModule} from "@angular/router";
+import { SidebarComponent } from './sidebar/sidebar.component';
 
 
 @NgModule({
   declarations: [
-    LayoutComponent
+    LayoutComponent,
+    SidebarComponent
   ],
   exports: [
-    LayoutComponent
+    LayoutComponent,
   ],
   imports: [
     CommonModule,

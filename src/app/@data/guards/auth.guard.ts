@@ -8,10 +8,8 @@ import {EnsureAuthenticateService} from "../services/ensure-authenticate.service
 })
 export class AuthGuard implements CanActivate {
 
-  constructor(private localStorage: EnsureAuthenticateService, private route: Router, private ensureAuthenticateService: EnsureAuthenticateService) {
-    this.ensureAuthenticateService.isLogged$.subscribe((isLogged) => {
-      isLogged && this.route.navigate(['/dashboard/diary'])
-    })
+  constructor(private localStorage: EnsureAuthenticateService, private route: Router) {
+
   }
 
   canActivate(
