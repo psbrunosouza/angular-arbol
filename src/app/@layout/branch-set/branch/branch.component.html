@@ -1,0 +1,13 @@
+<div class="branch-container" [ngClass]="{'selected': selected}">
+  <div class="branch-content">
+    <div class="branch-arrow">
+      <ab-icon  [icon]="'bi bi-caret-right-fill'" ></ab-icon>
+    </div>
+    <div>
+      <p>{{branch.name}}</p>
+    </div>
+  </div>
+  <div class="branch-quantity">
+    <p>{{branch.children.length}}</p>
+  </div>
+</div>

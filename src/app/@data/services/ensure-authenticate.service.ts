@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import {BehaviorSubject} from "rxjs";
 
+
 @Injectable({
   providedIn: 'root'
 })
@@ -21,7 +22,8 @@ export class EnsureAuthenticateService {
   }
 
   getToken(key: string) {
-    return localStorage.getItem(key);
+    const storage = JSON.parse(<string>localStorage.getItem(key));
+    return storage.token;
   }
 
   checkIsLogged(key: string) {
