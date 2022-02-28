@@ -1,0 +1,11 @@
+@import "src/app/@styles/base";
+
+.actions {
+  display: flex;
+  justify-content: end;
+
+  .save-action {
+    width: 32px;
+  }
+}
+

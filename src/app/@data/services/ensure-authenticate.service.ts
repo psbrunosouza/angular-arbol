@@ -1,36 +1,31 @@
 import { Injectable } from '@angular/core';
 import {BehaviorSubject} from "rxjs";
-
+import jwt_decode from "jwt-decode";
+import {TokenModel} from "../models/token.model";
 
 @Injectable({
   providedIn: 'root'
 })
 export class EnsureAuthenticateService {
 
-  isLogged$: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
+  private key = 'token_arbol_notes';
 
   constructor() { }
 
-  private setIsLogged(value: boolean): void {
-    this.isLogged$.next(value);
+  setToken(token: string) {
+    localStorage.setItem(this.key, token);
   }
 
-  setToken(data: any, key: string) {
-    const jsonData = JSON.stringify(data);
-    localStorage.setItem(key, jsonData);
-    this.setIsLogged(true);
+  getToken(): string | null {
+    return <string>localStorage.getItem(this.key);
   }
 
-  getToken(key: string) {
-    const storage = JSON.parse(<string>localStorage.getItem(key));
-    return storage.token;
+  checkIsLogged(): boolean {
+    const decodedToken = this.getToken() && <TokenModel>jwt_decode(<string>this.getToken());
+    return !!(this.getToken() && decodedToken && decodedToken.exp > Math.ceil(Date.now() / 1000));
   }
 
-  checkIsLogged(key: string) {
-    this.getToken(key) && this.setIsLogged(true);
-  }
-
-  removeToken(key: string) {
-    localStorage.removeItem(key);
+  removeToken() {
+    localStorage.removeItem(this.key);
   }
 }

@@ -11,7 +11,7 @@ export class BranchService implements IBranchService{
   url = '/branches';
 
   private httpHeaders = new HttpHeaders({
-    Authorization: 'Bearer ' + this.ensureAuth.getToken('token'),
+    Authorization: 'Bearer ' + this.ensureAuth.getToken(),
   });
 
   constructor(private http: HttpClient, private ensureAuth: EnsureAuthenticateService) {

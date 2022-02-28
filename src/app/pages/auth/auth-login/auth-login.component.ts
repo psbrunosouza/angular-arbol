@@ -19,16 +19,16 @@ export class AuthLoginComponent implements OnInit {
 
   ngOnInit(): void {
     this.user = new UserModel();
-    this.ensureAuthenticateService.checkIsLogged('token');
 
-    this.ensureAuthenticateService.isLogged$.subscribe((isLogged) => {
-      isLogged && this.router.navigate(['/dashboard/diary']);
-    });
+    if(this.ensureAuthenticateService.checkIsLogged()) {
+      this.router.navigate(['/dashboard/diary']);
+    }
   }
 
   submit(){
     this.authService.auth(this.user).subscribe((authData) => {
-      this.ensureAuthenticateService.setToken(authData, 'token');
+      this.ensureAuthenticateService.setToken(authData.token);
+      this.router.navigate(['/dashboard/diary']);
     });
   }
 }
