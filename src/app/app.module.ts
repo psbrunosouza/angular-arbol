@@ -10,7 +10,6 @@ import {EnsureAuthenticateService} from "./@data/services/ensure-authenticate.se
 import {MarkdownModule} from "ngx-markdown";
 import {ShowcaseBranchService} from "./@data/services/showcase-branch.service";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
-import {TreeStructureService} from "./@layout/tree-structure/tree-structure.service";
 
 @NgModule({
   declarations: [
@@ -25,7 +24,7 @@ import {TreeStructureService} from "./@layout/tree-structure/tree-structure.serv
     BrowserAnimationsModule,
     MarkdownModule.forRoot()
   ],
-  providers: [EnsureAuthenticateService, ShowcaseBranchService, TreeStructureService],
+  providers: [EnsureAuthenticateService, ShowcaseBranchService],
   bootstrap: [AppComponent],
 })
 export class AppModule { }

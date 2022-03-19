@@ -1,9 +1,9 @@
 
 <div class="branch-list" *ngFor="let branch of branches">
-    <app-branch [branch]="branch" ></app-branch>
+    <app-branch (branchEvent$)="loadSelectedBranch($event)" [branch]="branch" ></app-branch>
 
     <div *ngIf="branch.children && branch.expanded">
-      <app-tree-view [branches]="branch.children">
+      <app-tree-view  [branches]="branch.children">
       </app-tree-view>
     </div>
 </div>

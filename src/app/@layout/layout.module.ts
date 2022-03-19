@@ -10,8 +10,6 @@ import { PageComponent } from './page/page.component';
 import {ThemeModule} from "../@theme/theme.module";
 import { BranchComponent } from './tree-structure/tree-view/branch/branch.component';
 import { TreeViewComponent } from './tree-structure/tree-view/tree-view.component';
-import {TreeStructureService} from "./tree-structure/tree-structure.service";
-
 
 @NgModule({
   declarations: [
