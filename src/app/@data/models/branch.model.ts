@@ -6,11 +6,13 @@ import {Observable} from "rxjs";
 
 export class BranchModel extends DefaultModel {
   name: string;
-  description?: string;
   user: UserModel;
   children: BranchModel[];
   category: CategoryModel;
   status: StatusModel;
+  description?: string;
+  level?: number;
+  expanded?: boolean;
 }
 
 export interface IBranchService {
