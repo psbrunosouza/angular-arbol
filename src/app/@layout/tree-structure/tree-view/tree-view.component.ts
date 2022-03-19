@@ -9,7 +9,7 @@ import {BranchModel} from "../../../@data/models/branch.model";
 export class TreeViewComponent implements OnInit {
   @Input() branches: BranchModel[] = [];
 
-  @Input() level: number = 1;
+  leftSpacing: number = 12;
 
   constructor() {
   }
@@ -27,6 +27,7 @@ export class TreeViewComponent implements OnInit {
 
         if(branch.children){
           this.onExpand(index);
+          this.applyLevel(index);
         }
       }
     })
@@ -36,5 +37,16 @@ export class TreeViewComponent implements OnInit {
     this.branches[index].children
       ? this.branches[index].expanded = !this.branches[index].expanded
       : this.branches[index].expanded = false;
+  }
+
+  applyLevel(index: number): void {
+    if(this.branches[index].children){
+      this.branches[index].children = this.branches[index].children.map((branch) => ({
+        ...branch,
+        level: <number>this.branches[index].level + 1
+      }))
+    }
+
+    console.log( this.branches[index])
   }
 }
