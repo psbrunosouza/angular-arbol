@@ -1,7 +1,7 @@
 <div *ngIf="branch" class="branch-container" >
   <div class="branch-content">
     <div class="branch-arrow">
-      <ab-icon (click)="loadBranch(branch.id)" [icon]="'bi bi-caret-right-fill'" ></ab-icon>
+      <ab-icon (click)="loadBranch(branch.id)" [icon]="arrowStatus" ></ab-icon>
     </div>
     <div>
       <p>{{branch.name}}</p>

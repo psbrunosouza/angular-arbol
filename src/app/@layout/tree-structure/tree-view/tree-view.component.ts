@@ -46,7 +46,5 @@ export class TreeViewComponent implements OnInit {
         level: <number>this.branches[index].level + 1
       }))
     }
-
-    console.log( this.branches[index])
   }
 }
