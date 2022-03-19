@@ -1,0 +1,48 @@
+@import "../../../../@styles/base";
+
+.branch-container {
+  width: 100%;
+  height: 36px;
+  background: $white;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 16px;
+
+  transition: background-color 0.3s;
+
+  &:hover {
+    background: $tertiary;
+  }
+
+  .branch-content {
+    display: flex;
+    align-items: center;
+
+    .branch-arrow {
+      margin-right: 6px;
+    }
+  }
+
+  .branch-quantity {
+    background: $primary;
+    width: 24px;
+    height: 24px;
+    border-radius: 4px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    p {
+      color: $white;
+      font-weight: bold;
+    }
+  }
+}
+
+.selected {
+  background: $tertiary;
+}

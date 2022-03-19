@@ -7,6 +7,9 @@ import {ThemeModule} from "./@theme/theme.module";
 import {LayoutModule} from "./@layout/layout.module";
 import {HttpClientModule} from "@angular/common/http";
 import {EnsureAuthenticateService} from "./@data/services/ensure-authenticate.service";
+import {MarkdownModule} from "ngx-markdown";
+import {ShowcaseBranchService} from "./@data/services/showcase-branch.service";
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 
 @NgModule({
   declarations: [
@@ -17,9 +20,11 @@ import {EnsureAuthenticateService} from "./@data/services/ensure-authenticate.se
     AppRoutingModule,
     ThemeModule,
     LayoutModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MarkdownModule.forRoot()
   ],
-  providers: [EnsureAuthenticateService],
-  bootstrap: [AppComponent]
+  providers: [EnsureAuthenticateService, ShowcaseBranchService],
+  bootstrap: [AppComponent],
 })
 export class AppModule { }

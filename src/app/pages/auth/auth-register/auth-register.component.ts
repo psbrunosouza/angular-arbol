@@ -19,16 +19,15 @@ export class AuthRegisterComponent implements OnInit {
   ngOnInit(): void {
     this.user = new UserModel();
 
-    this.ensureAuthenticateService.checkIsLogged('token');
-
-    this.ensureAuthenticateService.isLogged$.subscribe((isLogged) => {
-      isLogged && this.router.navigate(['/dashboard/diary']);
-    })
+    if(this.ensureAuthenticateService.checkIsLogged()) {
+      this.router.navigate(['/dashboard/diary']);
+    }
   }
 
   submit(): void {
     this.userService.create(this.user).subscribe((res) => {
       console.log(res);
+      this.router.navigate(['/dashboard/diary']);
     })
   }
 

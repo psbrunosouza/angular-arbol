@@ -1,0 +1,28 @@
+@import "src/app/@styles/base";
+
+.markdown-view {
+  width: 100%;
+  background-color: $white;
+  padding: 24px;
+  border-radius: 5px;
+  min-height: 240px;
+  border: 1px dashed $white;
+}
+
+.text-area-view {
+  max-width: 100%;
+  background-color: $white;
+  padding: 24px;
+  border-radius: 5px;
+  min-height: 240px;
+  border: 1px dashed $secondary;
+
+  textarea {
+    min-height: 240px;
+    width: 100%;
+    border: none;
+
+    outline: none;
+    resize: none;
+  }
+}

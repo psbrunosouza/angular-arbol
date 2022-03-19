@@ -1,0 +1,18 @@
+
+.branch-set-container {
+  width: 280px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .add-branch {
+    width: 70%;
+    margin-top: 16px;
+  }
+
+  .multi-dimensional-branch-view {
+    width: 100%;
+    height: 100%;
+  }
+}
