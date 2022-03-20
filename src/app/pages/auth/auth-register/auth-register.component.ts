@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import {EnsureAuthenticateService} from "../../../@data/services/ensure-authenticate.service";
+import {EnsureAuthenticateService} from "../../../@data/services/auth/ensure-authenticate.service";
 import {Router} from "@angular/router";
 import {UserModel} from "../../../@data/models/user.model";
-import {UserService} from "../../../@data/services/user.service";
+import {UserService} from "../../../@data/services/user/user.service";
 
 @Component({
   selector: 'app-auth-register',

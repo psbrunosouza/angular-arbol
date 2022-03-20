@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import {Subject} from "rxjs";
-import {BranchModel} from "../models/branch.model";
+import {BranchModel} from "../../models/branch.model";
 
 @Injectable({providedIn: 'root'})
 export class SelectedBranchService {

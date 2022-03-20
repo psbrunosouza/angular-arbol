@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {BranchModel} from "../../../@data/models/branch.model";
-import {SelectedBranchService} from "../../../@data/services/selected-branch.service";
+import {SelectedBranchService} from "../../../@data/services/branch/selected-branch.service";
 
 @Component({
   selector: 'app-diary',

@@ -1,7 +1,7 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {BranchModel} from "../../../../@data/models/branch.model";
-import {BranchService} from "../../../../@data/services/branch.service";
-import {SelectedBranchService} from "../../../../@data/services/selected-branch.service";
+import {BranchService} from "../../../../@data/services/branch/branch.service";
+import {SelectedBranchService} from "../../../../@data/services/branch/selected-branch.service";
 
 @Component({
   selector: 'app-branch',

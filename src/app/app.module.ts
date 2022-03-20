@@ -6,9 +6,9 @@ import { AppComponent } from './app.component';
 import {ThemeModule} from "./@theme/theme.module";
 import {LayoutModule} from "./@layout/layout.module";
 import {HttpClientModule} from "@angular/common/http";
-import {EnsureAuthenticateService} from "./@data/services/ensure-authenticate.service";
+import {EnsureAuthenticateService} from "./@data/services/auth/ensure-authenticate.service";
 import {MarkdownModule} from "ngx-markdown";
-import {SelectedBranchService} from "./@data/services/selected-branch.service";
+import {SelectedBranchService} from "./@data/services/branch/selected-branch.service";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 
 @NgModule({
