@@ -20,7 +20,6 @@ export class TreeStructureComponent implements OnInit {
   loadBranches(): void {
     this.branchService.listRoots().subscribe((branches) => {
       this.branches = branches.map((branch) => ({...branch, level: 1}));
-      console.log(this.branches)
     })
   }
 }

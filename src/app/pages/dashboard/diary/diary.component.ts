@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {BranchModel} from "../../../@data/models/branch.model";
-import {ShowcaseBranchService} from "../../../@data/services/showcase-branch.service";
+import {SelectedBranchService} from "../../../@data/services/selected-branch.service";
 
 @Component({
   selector: 'app-diary',
@@ -14,12 +14,12 @@ export class DiaryComponent implements OnInit {
 
   activeMarkdownContent: boolean = false;
 
-  constructor(private showCaseBranchService: ShowcaseBranchService) { }
+  constructor(private selectedBranchService: SelectedBranchService) { }
 
   ngOnInit(): void {
     this.branch = new BranchModel();
 
-    this.showCaseBranchService.currentBranch$.subscribe((branch) => {
+    this.selectedBranchService.selectedBranch$.subscribe((branch) => {
       this.branch = branch;
     });
   }

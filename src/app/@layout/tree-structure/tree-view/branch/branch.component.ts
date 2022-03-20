@@ -1,6 +1,7 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {BranchModel} from "../../../../@data/models/branch.model";
 import {BranchService} from "../../../../@data/services/branch.service";
+import {SelectedBranchService} from "../../../../@data/services/selected-branch.service";
 
 @Component({
   selector: 'app-branch',
@@ -22,7 +23,7 @@ export class BranchComponent implements OnInit {
 
   arrowStatus: string = this.arrowStatusList["inactive"];
 
-  constructor(private branchService: BranchService) { }
+  constructor(private branchService: BranchService, private selectedBranchService: SelectedBranchService) { }
 
   ngOnInit(): void {
   }
@@ -30,8 +31,8 @@ export class BranchComponent implements OnInit {
   loadBranch(id: number): void {
     this.branchService.show(id).subscribe(branch => {
       this.branch = branch;
-      this.branchEvent$.emit(this.branch);
       this.arrowStatus = this.activateBranchArrow();
+      this.branchEvent$.emit(this.branch);
     });
   }
 
@@ -43,5 +44,9 @@ export class BranchComponent implements OnInit {
     return this.isActive
       ? this.arrowStatusList["active"]
       : this.arrowStatusList["inactive"];
+  }
+
+  selectBranch(id: number): void{
+    this.selectedBranchService.setSelectedBranch = this.branch;
   }
 }
