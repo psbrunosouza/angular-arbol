@@ -7,16 +7,22 @@ import { ArbolIconComponent } from './arbol-icon/arbol-icon.component';
 import { ArbolLinkComponent } from './arbol-link/arbol-link.component';
 import {RouterModule} from "@angular/router";
 import {FormsModule} from "@angular/forms";
+import { ArbolModalComponent } from './arbol-modal/arbol-modal.component';
+import { ArbolModalHeaderComponent } from './arbol-modal/arbol-modal-header/arbol-modal-header.component';
+import { ArbolModalBodyComponent } from './arbol-modal/arbol-modal-body/arbol-modal-body.component';
+import { ArbolModalFooterComponent } from './arbol-modal/arbol-modal-footer/arbol-modal-footer.component';
 
 @NgModule({
   declarations: [
-
     ArbolInputComponent,
     ArbolLabelComponent,
     ArbolButtonComponent,
     ArbolIconComponent,
     ArbolLinkComponent,
-
+    ArbolModalComponent,
+    ArbolModalHeaderComponent,
+    ArbolModalBodyComponent,
+    ArbolModalFooterComponent,
   ],
   imports: [
     CommonModule,
@@ -28,7 +34,10 @@ import {FormsModule} from "@angular/forms";
     ArbolButtonComponent,
     ArbolLabelComponent,
     ArbolIconComponent,
-    ArbolLinkComponent
+    ArbolLinkComponent,
+    ArbolModalComponent,
+    ArbolModalFooterComponent,
+    ArbolModalHeaderComponent
   ]
 })
 export class ThemeModule {

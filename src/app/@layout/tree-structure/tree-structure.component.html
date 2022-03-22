@@ -1,6 +1,6 @@
 <div class="branch-set-container">
   <div class="add-branch">
-    <ab-button>
+    <ab-button  type="button" (click)="modal.changeModalVisibility()">
       Adicionar
     </ab-button>
   </div>
@@ -8,4 +8,14 @@
   <div class="multi-dimensional-branch-view">
     <app-tree-view  [branches]="branches"></app-tree-view>
   </div>
+
+  <ab-modal size="medium" [isCompact]="false" #modal>
+    <ab-modal-header><h5>Criar novo tarefa</h5></ab-modal-header>
+    <ab-modal-footer class="ab-modal-footer">
+      <ab-button (click)="modal.changeModalVisibility()" type="button" class="me-3" use="link">Cancelar</ab-button>
+      <ab-button type="button"  use="fill">Confirmar</ab-button>
+    </ab-modal-footer>
+  </ab-modal>
 </div>
+
+

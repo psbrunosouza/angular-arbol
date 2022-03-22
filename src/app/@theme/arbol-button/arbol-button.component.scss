@@ -1,14 +1,11 @@
 @import "../../@styles/base";
 
 .arbol-button{
-  margin: 12px 0;
-
   button {
     width: 100%;
     border: 1px solid $primary;
     background: $primary;
     outline: none;
-    border: $primary;
     color: $text-secondary;
     border-radius: 2px;
     padding: 5px;
@@ -18,8 +15,6 @@
 }
 
 .arbol-outline {
-  margin: 12px 0;
-
   button {
     padding: 5px;
     width: 100%;
