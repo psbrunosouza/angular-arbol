@@ -10,6 +10,7 @@ import { PageComponent } from './page/page.component';
 import {ThemeModule} from "../@theme/theme.module";
 import { BranchComponent } from './tree-structure/tree-view/branch/branch.component';
 import { TreeViewComponent } from './tree-structure/tree-view/tree-view.component';
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { TreeViewComponent } from './tree-structure/tree-view/tree-view.componen
   imports: [
     CommonModule,
     RouterModule,
-    ThemeModule
+    ThemeModule,
+    FormsModule
   ],
 })
 export class LayoutModule { }

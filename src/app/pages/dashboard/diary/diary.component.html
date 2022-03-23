@@ -1,15 +1,13 @@
 <app-page title="title">
   <div>
     <div class="actions">
-      <div class="save-action">
-        <ab-button  [use]="activeMarkdownContent ? 'outline' : 'fill'" (click)="activeMarkdownContent = !activeMarkdownContent">
+      <div class="save-action mb-3">
+        <ab-button  [use]="activeMarkdownContent ? 'outline' : 'fill'" (click)="updateBranch(branch)">
           <ab-icon [color]="activeMarkdownContent ? '#9373ED' : '#fff'" [icon]="'bi bi-hash'"></ab-icon>
         </ab-button>
       </div>
     </div>
-
-    <app-markdown-display *ngIf="!!branch.description" [active]="activeMarkdownContent" [data]="branch"></app-markdown-display>
+    <app-markdown-display [active]="activeMarkdownContent" [data]="branch"></app-markdown-display>
   </div>
 </app-page>
-
 
