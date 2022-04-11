@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {BranchService} from "../../@data/services/branch/branch.service";
 import {BranchModel} from "../../@data/models/branch.model";
-import {ArbolModalComponent} from "../../@theme/arbol-modal/arbol-modal.component";
+import {ArbolModalComponent} from "../../@components/arbol-modal/arbol-modal.component";
 
 @Component({
   selector: 'app-tree-structure',
@@ -28,8 +28,7 @@ export class TreeStructureComponent implements OnInit {
   }
 
   onSubmit(modal: ArbolModalComponent): void {
-    this.branchService.create(this.branch).subscribe((branch) => {
-      console.log(branch);
+    this.branchService.create(this.branch).subscribe((res) => {
       this.loadBranches();
       modal.changeModalVisibility();
     })

@@ -12,7 +12,7 @@ export class BranchComponent implements OnInit {
 
   @Input() branch: BranchModel;
 
-  @Output() branchEvent$: EventEmitter<BranchModel> = new EventEmitter<BranchModel>();
+  @Output() branchEvent: EventEmitter<BranchModel> = new EventEmitter<BranchModel>();
 
   arrowStatusList = {
     active: "bi bi-caret-down-fill",
@@ -32,7 +32,7 @@ export class BranchComponent implements OnInit {
     this.branchService.show(id).subscribe(branch => {
       this.branch = branch;
       this.arrowStatus = this.activateBranchArrow();
-      this.branchEvent$.emit(this.branch);
+      this.branchEvent.emit(this.branch);
     });
   }
 
@@ -46,7 +46,7 @@ export class BranchComponent implements OnInit {
       : this.arrowStatusList["inactive"];
   }
 
-  selectBranch(id: number): void{
+  selectBranch(_id: number): void{
     this.selectedBranchService.setSelectedBranch = this.branch;
   }
 }

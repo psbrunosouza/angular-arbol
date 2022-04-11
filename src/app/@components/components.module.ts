@@ -12,6 +12,8 @@ import { ArbolModalHeaderComponent } from './arbol-modal/arbol-modal-header/arbo
 import { ArbolModalBodyComponent } from './arbol-modal/arbol-modal-body/arbol-modal-body.component';
 import { ArbolModalFooterComponent } from './arbol-modal/arbol-modal-footer/arbol-modal-footer.component';
 import { ArbolTextareaComponent } from './arbol-textarea/arbol-textarea.component';
+import { ArbolContentHeaderComponent } from './arbol-content-header/arbol-content-header.component';
+import { ArbolInputTextComponent } from './arbol-input-text/arbol-input-text.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +27,8 @@ import { ArbolTextareaComponent } from './arbol-textarea/arbol-textarea.componen
     ArbolModalBodyComponent,
     ArbolModalFooterComponent,
     ArbolTextareaComponent,
+    ArbolContentHeaderComponent,
+    ArbolInputTextComponent,
   ],
   imports: [
     CommonModule,
@@ -41,8 +45,10 @@ import { ArbolTextareaComponent } from './arbol-textarea/arbol-textarea.componen
     ArbolModalFooterComponent,
     ArbolModalHeaderComponent,
     ArbolModalBodyComponent,
-    ArbolTextareaComponent
+    ArbolTextareaComponent,
+    ArbolContentHeaderComponent,
+    ArbolInputTextComponent
   ]
 })
-export class ThemeModule {
+export class ComponentsModule {
 }

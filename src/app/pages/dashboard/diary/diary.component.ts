@@ -21,12 +21,13 @@ export class DiaryComponent implements OnInit {
     this.branch = new BranchModel();
 
     this.selectedBranchService.selectedBranch$.subscribe((branch) => {
-      this.branch = branch;
+      this.branchService.show(branch.id).subscribe((branch) => {
+        this.branch = branch;
+      })
     });
   }
 
-  updateBranch(branch: BranchModel): void {
-
+  updateContentHeader(branch: BranchModel): void {
     const branchToUpdate: BranchModel = <BranchModel>{
       description: branch.description,
       name: branch.name,
@@ -36,11 +37,28 @@ export class DiaryComponent implements OnInit {
       status: branch.status
     }
 
-    console.log(branchToUpdate);
+    this.branchService.update(branchToUpdate).subscribe((branch) => {
+      /**
+       * TODO: put here any toast to inform the user that the branch was created
+       */
+    })
+  }
+
+  updateBranch(branch: BranchModel): void {
+    const branchToUpdate: BranchModel = <BranchModel>{
+      description: branch.description,
+      name: branch.name,
+      id: branch.id,
+      user: branch.user,
+      category: branch.category,
+      status: branch.status
+    }
 
     if(this.activeMarkdownContent){
       this.branchService.update(branchToUpdate).subscribe((branch) => {
-        console.log(branch)
+        /**
+         * TODO: put here any toast to inform the user that the branch was created
+         */
       })
       this.activeMarkdownContent = false;
     }else {

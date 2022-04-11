@@ -13,6 +13,7 @@ export class BranchModel extends DefaultModel {
   description?: string;
   level?: number;
   expanded?: boolean;
+  childrenQtd?: number;
 }
 
 export interface IBranchService {

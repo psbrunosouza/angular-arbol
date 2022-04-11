@@ -21,6 +21,7 @@
   .ab-modal {
     background-color: $white;
     border-radius: 2px;
+    max-height: 660px;
 
     @media only screen and (max-width : 1024px) {
       width: 90%;
