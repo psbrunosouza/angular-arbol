@@ -1,9 +1,9 @@
-@import "../../../../@styles/base";
+@import "../../../../@theme/theme";
 
 .branch-container {
   width: 100%;
   height: 36px;
-  background: $white;
+  background: $light;
 
   cursor: pointer;
 
@@ -16,7 +16,7 @@
   transition: background-color 0.3s;
 
   &:hover {
-    background: $tertiary;
+    background: $base-tertiary;
   }
 
   .branch-content {
@@ -29,7 +29,7 @@
   }
 
   .branch-quantity {
-    background: $primary;
+    background: $base-primary;
     width: 24px;
     height: 24px;
     border-radius: 4px;
@@ -39,12 +39,12 @@
     justify-content: center;
 
     p {
-      color: $white;
+      color: $light;
       font-weight: bold;
     }
   }
 }
 
 .selected {
-  background: $tertiary;
+  background: $base-tertiary;
 }

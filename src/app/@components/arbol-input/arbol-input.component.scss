@@ -1,4 +1,4 @@
-@import "../../@styles/base";
+@import "../../@theme/theme";
 
 .arbol-container {
   margin: 0 0 12px 0;
@@ -6,18 +6,18 @@
   .arbol-input {
     display: flex;
     align-items: center;
-    border: 1px solid $primary;
-    background: $white;
+    border: 1px solid $base-primary;
+    background: $background-primary;
     padding: 4px 8px;
     border-radius: 2px;
 
     input {
       margin: 0 4px;
-      background: $white;
+      background: $background-primary;
       border: none;
       outline: none;
       width: 100%;
-      color: $primary;
+      color: $base-primary;
 
       &::placeholder{
         color: $text-primary;

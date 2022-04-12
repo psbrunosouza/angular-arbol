@@ -1,6 +1,4 @@
-@import "src/app/@styles/base";
-
-
+@import "../../@theme/theme";
 
 .ab-modal-container{
 
@@ -19,7 +17,7 @@
   justify-content: center;
 
   .ab-modal {
-    background-color: $white;
+    background-color: $light;
     border-radius: 2px;
     max-height: 660px;
 
@@ -34,7 +32,7 @@
     .ab-modal-header {
       min-height: 48px;
       width: 100%;
-      border-bottom: 1px solid $tertiary;
+      border-bottom: 1px solid $base-tertiary;
 
       display: flex;
       align-items: center;
@@ -52,7 +50,7 @@
     .ab-modal-footer {
       min-height: 48px;
       width: 100%;
-      border-top: 1px solid $tertiary;
+      border-top: 1px solid $base-tertiary;
 
       display: flex;
       align-items: center;

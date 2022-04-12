@@ -1,7 +1,9 @@
+@import "src/app/@theme/theme";
+
 .sidebar {
   width: 68px;
   height: 100vh;
-  background: #9373ED;
+  background: $base-primary;
 
   display: flex;
   justify-content: space-between;

@@ -1,4 +1,4 @@
-@import "../../@styles/base";
+@import "../../@theme/theme";
 
 .arbol-input-container {
   .arbol-input-container-element {
@@ -11,7 +11,7 @@
       width: 100%;
 
       &:focus {
-        border-bottom: 2px solid $primary;
+        border-bottom: 2px solid $base-primary;
       }
     }
   }

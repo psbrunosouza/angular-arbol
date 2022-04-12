@@ -1,8 +1,8 @@
-@import "../../@styles/base";
+@import "../../@theme/theme";
 
 label {
   display: flex;
-  color: $primary;
+  color: $base-primary;
 
   .icon {
     margin: 0 4px;
