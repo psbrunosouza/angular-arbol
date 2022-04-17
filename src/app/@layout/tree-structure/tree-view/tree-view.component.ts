@@ -17,6 +17,10 @@ export class TreeViewComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  getSpacing(value: number): number {
+    return value;
+  }
+
   loadSelectedBranch(selectedBranch: BranchModel): void{
     !!this.branches && this.branches.forEach((branch, index) => {
 

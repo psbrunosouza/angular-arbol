@@ -1,5 +1,7 @@
+@import "src/app/@theme/theme";
+
 .page {
-  background: #f3f3f3;
+  background: $third-color;
   width: 100%;
   height: calc(100vh - 72px);
 

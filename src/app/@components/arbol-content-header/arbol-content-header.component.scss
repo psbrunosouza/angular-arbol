@@ -1,0 +1,23 @@
+@import "../../@theme/theme";
+
+.content-header{
+  width: 100%;
+  height: 66px;
+  background-color: $second-color;
+  border-radius: 4px;
+
+  margin: 8px 0;
+  padding: 8px 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .content-header-content {
+    display: flex;
+  }
+
+  .content-header-pos {
+    display: flex;
+  }
+}

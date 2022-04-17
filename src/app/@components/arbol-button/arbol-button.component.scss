@@ -1,15 +1,12 @@
-@import "../../@styles/base";
+@import "../../@theme/theme";
 
 .arbol-button{
-  margin: 12px 0;
-
   button {
     width: 100%;
-    border: 1px solid $primary;
-    background: $primary;
+    border: 1px solid $first-color;
+    background: $first-color;
     outline: none;
-    border: $primary;
-    color: $text-secondary;
+    color: $text-contrast-color;
     border-radius: 2px;
     padding: 5px;
     text-transform: uppercase;
@@ -18,14 +15,12 @@
 }
 
 .arbol-outline {
-  margin: 12px 0;
-
   button {
     padding: 5px;
     width: 100%;
     outline: none;
-    border: 1px solid $primary;
-    color: $text-primary;
+    border: 1px solid $first-color;
+    color: $text-color;
     background: transparent !important;
     border-radius: 2px;
     text-transform: uppercase;
@@ -39,7 +34,7 @@
     width: 100%;
     outline: none;
     border: none;
-    color: $text-primary;
+    color: $text-color;
     background: transparent !important;
     text-transform: uppercase;
     font-weight: bold;

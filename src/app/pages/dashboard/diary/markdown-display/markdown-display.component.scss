@@ -1,27 +1,31 @@
-@import "src/app/@styles/base";
+@import "src/app/@theme/theme";
 
 .markdown-view {
   width: 100%;
-  background-color: $white;
+  background-color: $second-color;
   padding: 24px;
   border-radius: 5px;
   min-height: 240px;
-  border: 1px dashed $white;
+  border: 1px dashed $second-color;
+
+  color: $text-color;
 }
 
 .text-area-view {
   max-width: 100%;
-  background-color: $white;
+  background-color: $second-color;
   padding: 24px;
   border-radius: 5px;
   min-height: 240px;
-  border: 1px dashed $secondary;
+  border: 1px dashed $second-color;
 
   textarea {
     min-height: 240px;
     width: 100%;
-    border: none;
+    color: $text-color;
+    background-color: $transparent-color;
 
+    border: none;
     outline: none;
     resize: none;
   }

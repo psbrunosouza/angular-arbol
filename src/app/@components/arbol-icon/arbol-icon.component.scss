@@ -1,0 +1,13 @@
+@import "../../@theme/theme";
+
+i {
+  color: $first-color;
+}
+
+.selected {
+  color: $first-color;
+}
+
+.unselected {
+  color: $light-color;
+}

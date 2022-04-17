@@ -1,0 +1,22 @@
+@import "../../@theme/theme";
+
+.arbol-text-area {
+  width: 100%;
+  border: 1px solid $first-color;
+  background-color: $second-color;
+  border-radius: 2px;
+
+  textarea {
+    width: 100%;
+    height: 100%;
+    color: $first-color;
+    background: $transparent-color;
+    outline: none;
+    border: none;
+    padding: 4px 12px;
+
+    &::placeholder{
+      color: $first-color;
+    }
+  }
+}

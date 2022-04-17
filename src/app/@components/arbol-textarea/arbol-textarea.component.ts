@@ -2,22 +2,20 @@ import {Component, forwardRef, Input, OnInit} from '@angular/core';
 import {NG_VALUE_ACCESSOR} from "@angular/forms";
 
 @Component({
-  selector: 'ab-input',
-  templateUrl: './arbol-input.component.html',
-  styleUrls: ['./arbol-input.component.scss'],
+  selector: 'ab-textarea',
+  templateUrl: './arbol-textarea.component.html',
+  styleUrls: ['./arbol-textarea.component.scss'],
   providers: [
     {
       provide: NG_VALUE_ACCESSOR,
-      useExisting: forwardRef(() => ArbolInputComponent),
+      useExisting: forwardRef(() => ArbolTextareaComponent),
       multi: true
     }
   ]
 })
-export class ArbolInputComponent implements OnInit {
+export class ArbolTextareaComponent implements OnInit {
 
-  @Input() public placeholder?: string;
-
-  @Input() public type: "text" | "email" | "password" = "text";
+  @Input() placeholder?: string;
 
   @Input() public required = false;
 
@@ -25,15 +23,14 @@ export class ArbolInputComponent implements OnInit {
 
   @Input() public data: string;
 
-  public onChangeFn = (_: any) => {};
-
-  public onTouchedFn = () => {};
-
-  constructor() {
-  }
+  constructor() { }
 
   ngOnInit(): void {
   }
+
+  public onChangeFn = (_: any) => {};
+
+  public onTouchedFn = () => {};
 
   public registerOnChange(fn: any): void {
     this.onChangeFn = fn;
@@ -53,17 +50,5 @@ export class ArbolInputComponent implements OnInit {
 
   public onChange() {
     this.onChangeFn(this.data);
-  }
-
-  public togglePassword(): void {
-    switch (this.type){
-      case "text":
-        this.type = "password";
-        break;
-
-      case "password":
-        this.type = "text";
-        break;
-    }
   }
 }

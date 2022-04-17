@@ -1,4 +1,4 @@
-@import "../../@styles/base";
+@import "../../@theme/theme";
 
 .arbol-link {
   width: 100%;
@@ -6,7 +6,7 @@
   justify-content: center;
 
   a {
-    color: $text-primary;
+    color: $first-color;
     text-decoration: none;
   }
 }

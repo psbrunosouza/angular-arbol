@@ -7,7 +7,7 @@ import { DiaryComponent } from './diary/diary.component';
 import {LayoutModule} from "../../@layout/layout.module";
 import {MarkdownModule} from "ngx-markdown";
 import {FormsModule} from "@angular/forms";
-import {ThemeModule} from "../../@theme/theme.module";
+import {ComponentsModule} from "../../@components/components.module";
 import { MarkdownDisplayComponent } from './diary/markdown-display/markdown-display.component';
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 
@@ -24,7 +24,7 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
     LayoutModule,
     MarkdownModule,
     FormsModule,
-    ThemeModule
+    ComponentsModule
   ]
 })
 export class DashboardModule { }

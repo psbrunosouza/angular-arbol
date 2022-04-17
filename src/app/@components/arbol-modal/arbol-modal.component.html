@@ -1,0 +1,13 @@
+  <div #modal  class="ab-modal-container"  [ngClass]="{'modal-is-closed': !isOpen}">
+    <div class="ab-modal" [ngClass]="getSelectedSize">
+      <div *ngIf="!isCompact" class="ab-modal-header">
+        <ng-content select="ab-modal-header"></ng-content>
+      </div>
+      <div class="ab-modal-body">
+        <ng-content select="ab-modal-body"></ng-content>
+      </div>
+      <div *ngIf="!isCompact"  class="ab-modal-footer">
+        <ng-content select="ab-modal-footer"></ng-content>
+      </div>
+    </div>
+  </div>

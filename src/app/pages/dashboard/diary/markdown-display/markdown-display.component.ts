@@ -17,5 +17,4 @@ export class MarkdownDisplayComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
 }

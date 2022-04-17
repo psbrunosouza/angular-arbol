@@ -7,9 +7,10 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { TreeStructureComponent } from './tree-structure/tree-structure.component';
 import { HeaderComponent } from './header/header.component';
 import { PageComponent } from './page/page.component';
-import {ThemeModule} from "../@theme/theme.module";
+import {ComponentsModule} from "../@components/components.module";
 import { BranchComponent } from './tree-structure/tree-view/branch/branch.component';
 import { TreeViewComponent } from './tree-structure/tree-view/tree-view.component';
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { TreeViewComponent } from './tree-structure/tree-view/tree-view.componen
   imports: [
     CommonModule,
     RouterModule,
-    ThemeModule
+    ComponentsModule,
+    FormsModule
   ],
 })
 export class LayoutModule { }

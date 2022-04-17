@@ -1,13 +1,13 @@
-<div (click)="selectBranch(branch.id)" *ngIf="branch" class="branch-container" >
+<div  (click)="selectBranch(branch.id)" *ngIf="branch" class="branch-container" >
   <div class="branch-content">
     <div class="branch-arrow">
-      <ab-icon (click)="loadBranch(branch.id)" [icon]="arrowStatus" ></ab-icon>
+      <ab-icon (click)="loadBranch(branch.id)" [selected]="true" [icon]="arrowStatus" ></ab-icon>
     </div>
-    <div>
+    <div class="branch-name">
       <p>{{branch.name}}</p>
     </div>
   </div>
-  <div class="branch-quantity">
-    <p>{{branch?.children?.length ?? 0}}</p>
-  </div>
+<!--  <div class="branch-quantity">-->
+<!--    <p>{{branch.childrenQtd ?? 0}}</p>-->
+<!--  </div>-->
 </div>

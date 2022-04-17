@@ -1,35 +1,16 @@
-import {NgModule} from '@angular/core';
-import {CommonModule} from '@angular/common';
-import { ArbolInputComponent } from './arbol-input/arbol-input.component';
-import { ArbolLabelComponent } from './arbol-label/arbol-label.component';
-import { ArbolButtonComponent } from './arbol-button/arbol-button.component';
-import { ArbolIconComponent } from './arbol-icon/arbol-icon.component';
-import { ArbolLinkComponent } from './arbol-link/arbol-link.component';
-import {RouterModule} from "@angular/router";
-import {FormsModule} from "@angular/forms";
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import {ThemeService} from "./theme.service";
+
+
 
 @NgModule({
-  declarations: [
-
-    ArbolInputComponent,
-    ArbolLabelComponent,
-    ArbolButtonComponent,
-    ArbolIconComponent,
-    ArbolLinkComponent,
-
-  ],
+  declarations: [],
   imports: [
-    CommonModule,
-    RouterModule,
-    FormsModule
+    CommonModule
   ],
-  exports: [
-    ArbolInputComponent,
-    ArbolButtonComponent,
-    ArbolLabelComponent,
-    ArbolIconComponent,
-    ArbolLinkComponent
+  providers: [
+    ThemeService
   ]
 })
-export class ThemeModule {
-}
+export class ThemeModule { }

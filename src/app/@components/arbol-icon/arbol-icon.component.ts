@@ -13,6 +13,8 @@ export class ArbolIconComponent implements OnInit {
 
   @Input() public color?: string;
 
+  @Input() public selected?: boolean = false;
+
   constructor() { }
 
   ngOnInit(): void {
