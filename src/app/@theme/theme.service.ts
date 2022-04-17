@@ -27,10 +27,10 @@ export class ThemeService implements IThemeService{
   setActiveTheme(theme: Theme): void {
     this.active = theme;
 
-    Object.keys(this.active.properties).forEach(property => {
+    Object.keys(this.active.variables).forEach(property => {
       document.documentElement.style.setProperty(
         property,
-        this.active.properties[property]
+        this.active.variables[property]
       );
     });
   }

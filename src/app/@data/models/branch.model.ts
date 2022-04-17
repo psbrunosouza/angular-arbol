@@ -11,7 +11,7 @@ export class BranchModel extends DefaultModel {
   category: CategoryModel;
   status: StatusModel;
   description?: string;
-  level?: number;
+  level: number;
   expanded?: boolean;
   childrenQtd?: number;
 }

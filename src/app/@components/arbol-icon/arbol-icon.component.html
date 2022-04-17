@@ -1,1 +1,7 @@
-<i [class]="icon" [style.font-size.px]="size" [style.color]="color"></i>
+<i
+  [class]="selected
+    ? 'selected ' + icon
+    : 'unselected icon ' + icon"
+  [style.font-size.px]="size"
+  [style.color]="color">
+</i>

@@ -10,7 +10,7 @@
   </div>
 
   <ab-modal size="medium" [isCompact]="false" #modal>
-    <ab-modal-header><h5>Criar novo tarefa</h5></ab-modal-header>
+    <ab-modal-header><ab-label><h5>Criar novo tarefa</h5></ab-label></ab-modal-header>
     <ab-modal-body>
       <ab-input name="name" [(ngModel)]="branch.name" placeholder="Título"></ab-input>
       <ab-textarea name="description" [(ngModel)]="branch.description" placeholder="# Anotações..."></ab-textarea>

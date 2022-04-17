@@ -1,41 +1,26 @@
-export class Theme {
-  name: string;
-  properties: any;
-}
-
 export const LIGHT: Theme = {
   name: "light",
-  properties: {
-    "--light": "#fff",
-    "--dark": "#000",
+  variables: {
+    /**
+     * Extra colors
+     */
+    "--light-color": "#fff",
+    "--dark-color": "#000",
 
-    "--base-primary": "#9373ed",
-    "--base-secondary": "#7c5bd9",
-    "--base-tertiary": "#efefef",
+    /**
+     * Fundamental colors of the system based
+     * on sixty-forty-ten strategy
+     */
+    "--first-color": "#9373ed",
+    "--second-color": "#ffffff",
+    "--third-color": "#e8e8e8",
+    "--transparent-color": "transparent",
 
-    "--background-primary": "#eeeeee",
-    "--background-secondary": "#D3D3D3FF",
-    "--background-tertiary": "#b7b7b7",
 
-    "--warning-primary": "#e7d04d",
-    "--warning-secondary": "#c59e3b",
-    "--warning-tertiary": "#a67d31",
+    /** Text colors */
+    "--text-color": "#232323",
+    "--text-contrast-color": "#ffffff",
 
-    "--success-primary": "#75e74f",
-    "--success-secondary": "#66cc44",
-    "--success-tertiary": "#77b939",
-
-    "--danger-primary": "#ec5743",
-    "--danger-secondary": "#ec5743",
-    "--danger-tertiary": "#ec5743",
-
-    "--info-primary": "#43ecec",
-    "--info-secondary": "#43ecec",
-    "--info-tertiary": "#43ecec",
-
-    "--text-primary": "#9373ed",
-    "--text-secondary": "#ffffff",
-    "--text-tertiary": "#1e1e1e",
 
     "--font-headers": "'Montserrat', sans-serif",
     "--font-paragraph": "'PT Sans', sans-serif",
@@ -52,40 +37,29 @@ export const LIGHT: Theme = {
     "--p-size": "12px",
   }
 };
-
 export const DARK: Theme = {
   name: "dark",
-  properties: {
-    "--light": "#fff",
-    "--dark": "#000",
+  variables: {
+    /**
+     * Extra colors
+     */
+    "--light-color": "#fff",
+    "--dark-color": "#000",
 
-    "--base-primary": "#9373ed",
-    "--base-secondary": "#7c5bd9",
-    "--base-tertiary": "#efefef",
+    /**
+     * Fundamental colors of the system based
+     * on sixty-forty-ten strategy
+     */
+    "--first-color": "#5165e5",
+    "--second-color": "#424242",
+    "--third-color": "#2f2f2f",
+    "--transparent-color": "transparent",
 
-    "--background-primary": "#d3d3d3",
-    "--background-secondary": "#D3D3D3FF",
-    "--background-tertiary": "#b7b7b7",
 
-    "--warning-primary": "#e7d04d",
-    "--warning-secondary": "#c59e3b",
-    "--warning-tertiary": "#a67d31",
+    /** Text colors */
+    "--text-color": "#ffffff",
+    "--text-contrast-color": "#ffffff",
 
-    "--success-primary": "#75e74f",
-    "--success-secondary": "#66cc44",
-    "--success-tertiary": "#77b939",
-
-    "--danger-primary": "#ec5743",
-    "--danger-secondary": "#ec5743",
-    "--danger-tertiary": "#ec5743",
-
-    "--info-primary": "#43ecec",
-    "--info-secondary": "#43ecec",
-    "--info-tertiary": "#43ecec",
-
-    "--text-primary": "#9373ed",
-    "--text-secondary": "#ffffff",
-    "--text-tertiary": "#1e1e1e",
 
     "--font-headers": "'Montserrat', sans-serif",
     "--font-paragraph": "'PT Sans', sans-serif",
@@ -102,6 +76,11 @@ export const DARK: Theme = {
     "--p-size": "12px",
   }
 };
+
+export class Theme {
+  name: string;
+  variables: any;
+}
 
 export abstract class IThemeService {
   abstract getAvailableThemes(): Theme[];

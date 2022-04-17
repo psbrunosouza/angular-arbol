@@ -17,7 +17,7 @@
   justify-content: center;
 
   .ab-modal {
-    background-color: $light;
+    background-color: $second-color;
     border-radius: 2px;
     max-height: 660px;
 
@@ -32,7 +32,7 @@
     .ab-modal-header {
       min-height: 48px;
       width: 100%;
-      border-bottom: 1px solid $base-tertiary;
+      border-bottom: 1px solid $third-color;
 
       display: flex;
       align-items: center;
@@ -50,7 +50,7 @@
     .ab-modal-footer {
       min-height: 48px;
       width: 100%;
-      border-top: 1px solid $base-tertiary;
+      border-top: 1px solid $third-color;
 
       display: flex;
       align-items: center;

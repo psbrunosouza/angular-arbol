@@ -36,6 +36,8 @@ export class BranchComponent implements OnInit {
     });
   }
 
+
+
   activateBranchArrow(): string {
     if(!!this.branch.children.length){
       this.isActive = !this.isActive

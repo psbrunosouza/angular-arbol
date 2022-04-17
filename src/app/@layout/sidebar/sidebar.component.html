@@ -4,7 +4,9 @@
       <i [style.color]="item.color" [class]="item.icon"></i>
     </a>
   </div>
-  <a [routerLink]="[settingsItem.link]">
-    <i [style.color]="settingsItem.color" [class]="settingsItem.icon"></i>
-  </a>
+  <div class="sidebar-settings-items">
+    <ab-button  use="outline" *ngFor="let setting of settingsItems" (click)="changeTheme(setting.action)">
+      <ab-icon [size]="24" [icon]="setting.icon" [color]="setting.color" ></ab-icon>
+    </ab-button>
+  </div>
 </div>

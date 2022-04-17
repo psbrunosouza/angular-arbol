@@ -3,7 +3,7 @@
 .sidebar {
   width: 68px;
   height: 100vh;
-  background: $base-primary;
+  background: $first-color;
 
   display: flex;
   justify-content: space-between;
@@ -11,12 +11,20 @@
   flex-direction: column;
 
   .sidebar-items {
+    margin-top: 16px;
     display: flex;
     flex-direction: column;
+    gap: 16px;
+  }
+
+  .sidebar-settings-items {
+    margin-bottom: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
   }
 
   a {
-    margin: 12px 0;
     i {
       font-size: 24px;
     }

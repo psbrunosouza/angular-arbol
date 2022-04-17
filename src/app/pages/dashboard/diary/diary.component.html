@@ -7,7 +7,7 @@
       <div pos class="actions">
         <div class="save-action">
           <ab-button  [use]="activeMarkdownContent ? 'outline' : 'fill'" (click)="updateBranch(branch)">
-            <ab-icon [color]="activeMarkdownContent ? '#9373ED' : '#fff'" [icon]="'bi bi-hash'"></ab-icon>
+            <ab-icon [selected]="activeMarkdownContent" [style.color]="activeMarkdownContent" [icon]="'bi bi-hash'"></ab-icon>
           </ab-button>
         </div>
       </div>

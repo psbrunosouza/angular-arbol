@@ -1,10 +1,13 @@
 
+@import "src/app/@theme/theme";
+
 .branch-set-container {
   width: 280px;
   height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: $second-color;
 
   .add-branch {
     width: 70%;
@@ -14,6 +17,7 @@
   .multi-dimensional-branch-view {
     width: 100%;
     height: 100%;
+    background-color: $second-color;
   }
 }
 

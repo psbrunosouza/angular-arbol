@@ -1,6 +1,6 @@
 <div  [ngSwitch]="active">
   <div  *ngSwitchCase="true" class="text-area-view" >
-      <textarea [(ngModel)]="data.description"></textarea>
+    <textarea [(ngModel)]="data.description"></textarea>
   </div>
   <div *ngSwitchCase="false" class="markdown-view">
     <markdown [data]="data.description"></markdown>

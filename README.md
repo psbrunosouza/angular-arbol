@@ -1,27 +1,49 @@
-# AngularArbol
+# Arbol notes API
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.2.
+O Arbol é uma ferramenta para acompanhamento de tarefas onde o utilizador terá a experiência
+de realizar um estudo mais inteligente, através da criação de tarefas que retornam
+ao utilizador utilizando do mecanismo de repetição espaçada já explorado em outras
+aplicações.
 
-## Development server
+## Apresentação
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+### Arvore de tarefas
 
-## Code scaffolding
+<div style="display: flex; justify-content: center; align-items: center">
+  <img alt="" src="src/assets/git-readme-images/apresentacao_arbol_notes.gif"/>
+</div>  
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Sistema de temas
 
-## Build
+<div style="display: flex; justify-content: center; align-items: center">
+  <img alt="" src="src/assets/git-readme-images/apresentacao_arbol_notes_temas.gif"/>
+</div>  
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## ✅ Como Usar
 
-## Running unit tests
+  ```
+# Clone o repositório
+$ git clone https://github.com/psbrunosouza/arbol-notes-angular.git
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+# Entre na pasta do repositório
+$ cd arbol-notes-angular
 
-## Running end-to-end tests
+# Instale as dependências
+$ yarn install/ npm install
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+# Rode a aplicação
+$ ng serve
+  ```
 
-## Further help
+## 🚀 Tecnologias
+Esse projeto foi desenvolvido com:
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+- <a href="https://angular.io/">Angular</a>
+- <a href="https://www.npmjs.com/package/ngx-markdown">ngx-markdown</a>
+- <a href="https://getbootstrap.com/docs/5.0/getting-started/introduction/">Bootstrap 5</a>
+
+## 📝 Licença
+Este código-fonte está sob uma licensa MIT. Confira a licença para mais informações.
+
+## #️⃣ Versão
+- 0.3.2

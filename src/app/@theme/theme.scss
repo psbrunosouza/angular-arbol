@@ -1,32 +1,22 @@
-/* Colors */
+/* other colors */
+$light-color: var(--light-color);
+$dark-color: var(--dark-color);
 
-$light: var(--light);
-$dark: var(--dark);
+/** fundamental colors */
+$first-color: var(--first-color);
+$second-color: var(--second-color);
+$third-color: var(--third-color);
+$transparent-color: var(--transparent-color);
 
-$base-primary: var(--base-primary);
-$base-secondary: var(--base-secondary);
-$base-tertiary: var(--base-tertiary);
+/** State control */
+$warning-color: var(--warning-primary);
+$success-color: var(--success-primary);
+$danger-color: var(--danger-primary);
+$info-color: var(--info-primary);
 
-$background-primary: var(--background-primary);
-$background-secondary: var(--background-secondary);
-$background-tertiary: var(--background-tertiary);
+/** text color */
+$text-color: var(--text-color);
+$text-contrast-color: var(--text-contrast-color);
 
-$warning-primary: var(--warning-primary);
-$warning-secondary: var(--warning-secondary);
-$warning-tertiary: var(--warning-tertiary);
 
-$success-primary: var(--success-primary);
-$success-secondary: var(--success-secondary);
-$success-tertiary: var(--success-tertiary);
 
-$danger-primary: var(--danger-primary);
-$danger-secondary: var(--danger-secondary);
-$danger-tertiary: var(--danger-tertiary);
-
-$info-primary: var(--info-primary);
-$info-secondary: var(--info-secondary);
-$info-tertiary: var(--info-tertiary);
-
-$text-primary: var(--text-primary);
-$text-secondary: var(--text-secondary);
-$text-tertiary: var(--text-tertiary);
