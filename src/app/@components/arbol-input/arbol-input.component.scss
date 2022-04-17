@@ -1,0 +1,26 @@
+@import "../../@theme/theme";
+
+.arbol-container {
+  margin: 0 0 12px 0;
+
+  .arbol-input {
+    display: flex;
+    align-items: center;
+    border: 1px solid $first-color;
+    background: $second-color;
+    border-radius: 2px;
+    padding: 4px 12px;
+
+    input {
+      width: 100%;
+      background: $transparent-color;
+      color: $first-color;
+      border: none;
+      outline: none;
+
+      &::placeholder{
+        color: $first-color;
+      }
+    }
+  }
+}

@@ -1,0 +1,12 @@
+<div class="sidebar">
+  <div class="sidebar-items">
+    <a *ngFor="let item of menuItems" [routerLink]="[item.link]">
+      <i [style.color]="item.color" [class]="item.icon"></i>
+    </a>
+  </div>
+  <div class="sidebar-settings-items">
+    <ab-button  use="outline" *ngFor="let setting of settingsItems" (click)="changeTheme(setting.action)">
+      <ab-icon [size]="24" [icon]="setting.icon" [color]="setting.color" ></ab-icon>
+    </ab-button>
+  </div>
+</div>

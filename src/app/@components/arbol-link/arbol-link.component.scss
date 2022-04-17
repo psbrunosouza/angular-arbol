@@ -1,0 +1,12 @@
+@import "../../@theme/theme";
+
+.arbol-link {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  a {
+    color: $first-color;
+    text-decoration: none;
+  }
+}

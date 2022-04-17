@@ -1,0 +1,19 @@
+@import "src/app/@theme/theme";
+
+.header-container {
+  width: 100%;
+  height: 72px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 24px;
+  background-color: $second-color;
+
+  .header-title {
+    h1 {
+      color: $text-color;
+    }
+  }
+}

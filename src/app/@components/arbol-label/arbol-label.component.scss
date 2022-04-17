@@ -1,0 +1,10 @@
+@import "../../@theme/theme";
+
+label {
+  display: flex;
+  color: $text-color;
+
+  .icon {
+    margin: 0 4px;
+  }
+}

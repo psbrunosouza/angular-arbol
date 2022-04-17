@@ -1,0 +1,11 @@
+<div class="arbol-text-area">
+  <textarea
+    [placeholder]="placeholder ?? ''"
+    (input)="onChange()"
+    (change)="onChange()"
+    (blur)="onTouchedFn()"
+    [(ngModel)]="data"
+    [required]="required"
+    [disabled]="disabled">
+  </textarea>
+</div>
