@@ -7,14 +7,14 @@
         </div>
         <div>
           <ab-input name="email" [(ngModel)]="user.email" placeholder="E-mail">
-            <ab-icon color="#9373ED" [icon]="'bi bi-envelope-fill'" pre></ab-icon>
+            <ab-icon  [icon]="'bi bi-envelope-fill'" pre></ab-icon>
           </ab-input>
         </div>
         <div>
           <ab-input name="name" [(ngModel)]="user.password" #passwordInput placeholder="Password" type="password">
-            <ab-icon color="#9373ED" [icon]="'bi bi-key-fill'" pre></ab-icon>
-            <ab-button use="link" color="#6f3aa1" (click)="passwordInput.togglePassword()" pos>
-              <ab-icon color="#9373ED" [icon]="passwordInput.type !== 'password' ? 'bi bi-eye-fill' : 'bi bi-eye-slash-fill'"></ab-icon>
+            <ab-icon [icon]="'bi bi-key-fill'" pre></ab-icon>
+            <ab-button use="link" (click)="passwordInput.togglePassword()" pos>
+              <ab-icon  [icon]="passwordInput.type !== 'password' ? 'bi bi-eye-fill' : 'bi bi-eye-slash-fill'"></ab-icon>
             </ab-button>
           </ab-input>
         </div>

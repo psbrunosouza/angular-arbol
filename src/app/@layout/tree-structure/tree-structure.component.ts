@@ -7,18 +7,25 @@ import {ArbolModalComponent} from "../../@components/arbol-modal/arbol-modal.com
   selector: 'app-tree-structure',
   templateUrl: './tree-structure.component.html',
   styleUrls: ['./tree-structure.component.scss'],
-  providers: [BranchService]
+  providers: []
 })
 export class TreeStructureComponent implements OnInit {
+
   branches: BranchModel[] = [];
 
   branch: BranchModel;
 
-  constructor(private branchService: BranchService) { }
+  constructor(private branchService: BranchService) {
+
+  }
 
   ngOnInit(): void {
     this.branch = new BranchModel();
     this.loadBranches();
+
+    this.branchService.branch$.subscribe(() => {
+      this.loadBranches();
+    });
   }
 
   loadBranches(): void {
@@ -28,7 +35,7 @@ export class TreeStructureComponent implements OnInit {
   }
 
   onSubmit(modal: ArbolModalComponent): void {
-    this.branchService.create(this.branch).subscribe((res) => {
+    this.branchService.create(this.branch).subscribe(() => {
       this.loadBranches();
       modal.changeModalVisibility();
     })

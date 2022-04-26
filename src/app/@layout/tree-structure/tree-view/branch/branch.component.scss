@@ -33,22 +33,6 @@
       color: $text-color;
     }
   }
-
-  .branch-quantity {
-    background: $first-color;
-    width: 24px;
-    height: 24px;
-    border-radius: 4px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    p {
-      color: $text-contrast-color;
-      font-weight: bold;
-    }
-  }
 }
 
 .selected {

@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {BranchModel} from "../../../../@data/models/branch.model";
 
 @Component({
@@ -13,8 +13,14 @@ export class MarkdownDisplayComponent implements OnInit {
 
   @Input() data: BranchModel;
 
+  @Output() saveBranchDescriptionEvent: EventEmitter<any> = new EventEmitter<any>();
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  saveBranchDescription(): void {
+    this.saveBranchDescriptionEvent.emit();
   }
 }

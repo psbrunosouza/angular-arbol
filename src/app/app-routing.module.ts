@@ -7,7 +7,7 @@ import {AuthComponent} from "./pages/auth/auth.component";
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'auth/login',
+    redirectTo: 'auth',
     pathMatch: 'full'
   },
   {

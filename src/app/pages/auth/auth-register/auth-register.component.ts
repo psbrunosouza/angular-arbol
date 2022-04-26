@@ -20,14 +20,14 @@ export class AuthRegisterComponent implements OnInit {
     this.user = new UserModel();
 
     if(this.ensureAuthenticateService.checkIsLogged()) {
-      this.router.navigate(['/dashboard/diary']);
+      this.router.navigate(['/dashboard/task']);
     }
   }
 
   submit(): void {
     this.userService.create(this.user).subscribe((res) => {
       console.log(res);
-      this.router.navigate(['/dashboard/diary']);
+      this.router.navigate(['/dashboard/task']);
     })
   }
 

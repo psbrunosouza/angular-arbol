@@ -1,0 +1,15 @@
+<app-page>
+  <div header>
+    <app-header>
+      <ab-input-text (inputTextBlurEvent)="updateBranchName(branch)"  [(ngModel)]="branch.name" title></ab-input-text>
+      <div actions>
+        <ab-button (click)="activeMarkdownContent = !activeMarkdownContent" use="fill">
+          <ab-icon color="#fff" icon="bi bi-pencil-square"></ab-icon>
+        </ab-button>
+      </div>
+    </app-header>
+  </div>
+  <div *ngIf="branch.id">
+    <app-markdown-display (saveBranchDescriptionEvent)="updateBranch(branch)" [active]="activeMarkdownContent" [data]="branch"></app-markdown-display>
+  </div>
+</app-page>

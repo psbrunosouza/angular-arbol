@@ -1,7 +1,7 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {BranchModel} from "../../../../@data/models/branch.model";
 import {BranchService} from "../../../../@data/services/branch/branch.service";
-import {SelectedBranchService} from "../../../../@data/services/branch/selected-branch.service";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-branch',
@@ -23,7 +23,7 @@ export class BranchComponent implements OnInit {
 
   arrowStatus: string = this.arrowStatusList["inactive"];
 
-  constructor(private branchService: BranchService, private selectedBranchService: SelectedBranchService) { }
+  constructor(private branchService: BranchService, private router: Router) { }
 
   ngOnInit(): void {
   }
@@ -36,8 +36,6 @@ export class BranchComponent implements OnInit {
     });
   }
 
-
-
   activateBranchArrow(): string {
     if(!!this.branch.children.length){
       this.isActive = !this.isActive
@@ -48,7 +46,7 @@ export class BranchComponent implements OnInit {
       : this.arrowStatusList["inactive"];
   }
 
-  selectBranch(_id: number): void{
-    this.selectedBranchService.setSelectedBranch = this.branch;
+  selectBranch(id: number): void{
+    this.router.navigate(['/dashboard/update-task', id])
   }
 }

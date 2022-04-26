@@ -1,3 +1,5 @@
+@import "src/app/@theme/theme";
+
 .actions {
   display: flex;
   justify-content: flex-end;
@@ -5,5 +7,9 @@
   .save-action {
     width: 32px;
   }
+}
+
+.title {
+  color: $text-color;
 }
 

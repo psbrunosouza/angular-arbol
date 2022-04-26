@@ -21,14 +21,14 @@ export class AuthLoginComponent implements OnInit {
     this.user = new UserModel();
 
     if(this.ensureAuthenticateService.checkIsLogged()) {
-      this.router.navigate(['/dashboard/diary']);
+      this.router.navigate(['/dashboard/task']);
     }
   }
 
   submit(){
     this.authService.auth(this.user).subscribe((authData) => {
       this.ensureAuthenticateService.setToken(authData.token);
-      this.router.navigate(['/dashboard/diary']);
+      this.router.navigate(['/dashboard/task']);
     });
   }
 }

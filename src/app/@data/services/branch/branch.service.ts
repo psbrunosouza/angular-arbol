@@ -1,14 +1,19 @@
 import { Injectable } from '@angular/core';
 import {BranchModel, IBranchService} from "../../models/branch.model";
-import {Observable} from "rxjs";
+import {BehaviorSubject, Observable, Subject} from "rxjs";
 import {HttpClient, HttpHeaders} from "@angular/common/http";
 import {environment} from "../../../../environments/environment";
 import {EnsureAuthenticateService} from "../auth/ensure-authenticate.service";
 
-@Injectable()
+@Injectable({
+  providedIn: 'root'
+})
 export class BranchService implements IBranchService{
 
   url = '/branches';
+
+  branch$: Subject<BranchModel> = new Subject();
+
 
   private httpHeaders = new HttpHeaders({
     Authorization: 'Bearer ' + this.ensureAuth.getToken(),
