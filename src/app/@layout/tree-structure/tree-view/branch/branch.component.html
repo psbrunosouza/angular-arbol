@@ -1,4 +1,4 @@
-<div  (click)="selectBranch(branch.id)" *ngIf="branch" class="branch-container" >
+<div  (click)="selectBranch(branch.id)" *ngIf="branch.id" class="branch-container" >
   <div class="branch-content">
     <div class="branch-arrow">
       <ab-icon (click)="loadBranch(branch.id)" [selected]="true" [icon]="arrowStatus" ></ab-icon>

@@ -15,9 +15,7 @@ export class TreeStructureComponent implements OnInit {
 
   branch: BranchModel;
 
-  constructor(private branchService: BranchService) {
-
-  }
+  constructor(private branchService: BranchService) {}
 
   ngOnInit(): void {
     this.branch = new BranchModel();
