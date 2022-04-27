@@ -24,6 +24,8 @@ export class ArbolButtonComponent implements OnInit {
 
   @Input() public color?: string;
 
+  @Input() public disabled?: boolean = false;
+
   constructor() { }
 
   ngOnInit(): void {

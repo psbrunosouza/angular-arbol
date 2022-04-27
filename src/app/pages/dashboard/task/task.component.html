@@ -2,12 +2,12 @@
   <div header>
     <app-header>
       <ab-input-text (inputTextBlurEvent)="updateBranchName(branch)"  [(ngModel)]="branch.name" title></ab-input-text>
-      <div *ngIf="branch.id" class="actions" actions>
-        <ab-button  (click)="activeMarkdownContent = !activeMarkdownContent" use="fill">
+      <div class="actions" actions>
+        <ab-button [disabled]="!branch.id" (click)="activeMarkdownContent = !activeMarkdownContent" use="fill">
           <ab-icon color="#fff" icon="bi bi-pencil-square"></ab-icon>
         </ab-button>
 
-        <ab-button (click)="modal.changeModalVisibility()"  use="fill">
+        <ab-button [disabled]="!branch.id" (click)="modal.changeModalVisibility()"  use="fill">
           <ab-icon color="#fff" icon="bi bi-trash2"></ab-icon>
         </ab-button>
       </div>

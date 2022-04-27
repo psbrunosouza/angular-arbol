@@ -52,4 +52,12 @@
   }
 }
 
+.arbol-disabled {
+  button {
+    &:disabled {
+      filter: brightness(0.7);
+    }
+  }
+}
+
 
