@@ -1,12 +1,13 @@
 <div
   [ngClass]="{
-  'arbol-button': use === 'fill',
-  'arbol-outline' : use === 'outline',
-  'arbol-link': use === 'link'
+    'arbol-fill': use === 'fill',
+    'arbol-outline': use === 'outline',
+    'arbol-link': use === 'link'
   }"
 >
   <ng-content select="[pre]"></ng-content>
   <button
+    [disabled]="disabled"
     [style.background]="use === 'fill' && background"
     [style.border-color]="use === 'outline' && borderColor"
     [style.border-radius]="borderRadius"

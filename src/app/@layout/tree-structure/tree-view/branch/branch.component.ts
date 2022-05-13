@@ -1,7 +1,8 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {BranchModel} from "../../../../@data/models/branch.model";
 import {BranchService} from "../../../../@data/services/branch/branch.service";
-import {SelectedBranchService} from "../../../../@data/services/branch/selected-branch.service";
+import {Router} from "@angular/router";
+import {ArbolModalComponent} from "../../../../@components/arbol-modal/arbol-modal.component";
 
 @Component({
   selector: 'app-branch',
@@ -9,6 +10,8 @@ import {SelectedBranchService} from "../../../../@data/services/branch/selected-
   styleUrls: ['./branch.component.scss'],
 })
 export class BranchComponent implements OnInit {
+
+  @Input() currentBranch: BranchModel;
 
   @Input() branch: BranchModel;
 
@@ -23,23 +26,22 @@ export class BranchComponent implements OnInit {
 
   arrowStatus: string = this.arrowStatusList["inactive"];
 
-  constructor(private branchService: BranchService, private selectedBranchService: SelectedBranchService) { }
+  constructor(private branchService: BranchService, private router: Router) { }
 
   ngOnInit(): void {
+    this.branch = new BranchModel();
   }
 
   loadBranch(id: number): void {
     this.branchService.show(id).subscribe(branch => {
-      this.branch = branch;
+      this.currentBranch = branch;
       this.arrowStatus = this.activateBranchArrow();
-      this.branchEvent.emit(this.branch);
+      this.branchEvent.emit(this.currentBranch);
     });
   }
 
-
-
   activateBranchArrow(): string {
-    if(!!this.branch.children.length){
+    if(!!this.currentBranch.children.length){
       this.isActive = !this.isActive
     }
 
@@ -48,7 +50,14 @@ export class BranchComponent implements OnInit {
       : this.arrowStatusList["inactive"];
   }
 
-  selectBranch(_id: number): void{
-    this.selectedBranchService.setSelectedBranch = this.branch;
+  selectBranch(id: number): void{
+    this.router.navigate(['/dashboard/update-task', id])
+  }
+
+  addBranch(onSubmit: ArbolModalComponent): void {
+    this.branchService.create({...this.branch, parent: this.currentBranch} as unknown as BranchModel).subscribe((branch) => {
+      console.log(branch);
+      onSubmit.changeModalVisibility();
+    })
   }
 }

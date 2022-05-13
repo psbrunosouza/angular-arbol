@@ -1,6 +1,6 @@
 @import "../../../../@theme/theme";
 
-.branch-container {
+.tree-item {
   width: 100%;
   height: 36px;
   background: $second-color;
@@ -19,38 +19,30 @@
     background: $third-color;
   }
 
-  .branch-content {
+  .tree-item__content {
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    width: 100%;
 
-    .branch-arrow {
+    div {
+      display: flex;
+    }
+
+    .tree-item__content__arrow {
       margin-right: 6px;
     }
-  }
 
-  .branch-name{
-    p {
-      color: $text-color;
-    }
-  }
-
-  .branch-quantity {
-    background: $first-color;
-    width: 24px;
-    height: 24px;
-    border-radius: 4px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    p {
-      color: $text-contrast-color;
-      font-weight: bold;
+    .tree-item__content__name{
+      p {
+        color: $text-color;
+      }
     }
   }
 }
 
-.selected {
-  background: $third-color;
+.app-modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
 }

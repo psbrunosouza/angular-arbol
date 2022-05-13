@@ -33,7 +33,6 @@ export const LIGHT: Theme = {
     "--h4-size": "18px",
     "--h5-size": "16px",
     "--h6-size": "14px",
-
     "--p-size": "12px",
   }
 };

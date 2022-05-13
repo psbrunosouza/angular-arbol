@@ -6,16 +6,15 @@ import {AuthRegisterComponent} from "./auth-register/auth-register.component";
 const routes: Routes = [
   {
     path: '',
-    children: [
-      {
-        path: 'login',
-        component: AuthLoginComponent
-      },
-      {
-        path: 'register',
-        component: AuthRegisterComponent
-      }
-    ]
+    redirectTo: 'login',
+  },
+  {
+    path: 'login',
+    component: AuthLoginComponent
+  },
+  {
+    path: 'register',
+    component: AuthRegisterComponent
   }
 ];
 

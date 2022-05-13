@@ -7,6 +7,7 @@ import {BranchModel} from "../../../@data/models/branch.model";
   styleUrls: ['./tree-view.component.scss']
 })
 export class TreeViewComponent implements OnInit {
+
   @Input() branches: BranchModel[] = [];
 
   leftSpacing: number = 12;
