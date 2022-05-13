@@ -13,14 +13,8 @@ export class MarkdownDisplayComponent implements OnInit {
 
   @Input() data: BranchModel;
 
-  @Output() saveBranchDescriptionEvent: EventEmitter<any> = new EventEmitter<any>();
-
   constructor() { }
 
   ngOnInit(): void {
-  }
-
-  saveBranchDescription(): void {
-    this.saveBranchDescriptionEvent.emit();
   }
 }

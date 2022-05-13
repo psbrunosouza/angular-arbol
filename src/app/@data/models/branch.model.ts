@@ -14,6 +14,7 @@ export class BranchModel extends DefaultModel {
   level: number;
   expanded?: boolean;
   childrenQtd?: number;
+  parent: UserModel;
 }
 
 export interface IBranchService {

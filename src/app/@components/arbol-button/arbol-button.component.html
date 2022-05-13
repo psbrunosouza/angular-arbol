@@ -1,10 +1,8 @@
 <div
   [ngClass]="{
-  'arbol-button-hover' : use === 'fill',
-  'arbol-button': use === 'fill',
-  'arbol-outline' : use === 'outline',
-  'arbol-link': use === 'link',
-  'arbol-disabled': disabled
+    'arbol-fill': use === 'fill',
+    'arbol-outline': use === 'outline',
+    'arbol-link': use === 'link'
   }"
 >
   <ng-content select="[pre]"></ng-content>
