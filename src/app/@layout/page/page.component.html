@@ -1,4 +1,6 @@
-<app-header [title]="title"></app-header>
+<div>
+  <ng-content select="[header]"></ng-content>
+</div>
 <div class="page">
   <ng-content></ng-content>
 </div>

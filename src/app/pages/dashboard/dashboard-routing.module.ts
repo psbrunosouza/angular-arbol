@@ -1,11 +1,19 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import {DiaryComponent} from "./diary/diary.component";
+import {TaskComponent} from "./task/task.component";
 
 const routes: Routes = [
   {
-    path: 'diary',
-    component: DiaryComponent
+    path: '',
+    redirectTo: 'task'
+  },
+  {
+    path: 'task',
+    component: TaskComponent
+  },
+  {
+    path: 'update-task/:id',
+    component: TaskComponent
   }
 ];
 

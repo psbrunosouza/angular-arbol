@@ -1,10 +1,11 @@
 <div class="arbol-input-container">
-  <div class="arbol-input-container-element" [style.width.px]="data && !!data.length ? data.length * 14 : 14">
+  <div class="arbol-input-container-element">
     <input
       [(ngModel)]="data"
       (input)="onChange()"
       (change)="onChange()"
       (blur)="onBlur()"
+
     />
   </div>
 </div>

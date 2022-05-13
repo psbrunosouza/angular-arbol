@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {ComponentsModule} from "./@components/components.module";
@@ -8,8 +7,8 @@ import {LayoutModule} from "./@layout/layout.module";
 import {HttpClientModule} from "@angular/common/http";
 import {EnsureAuthenticateService} from "./@data/services/auth/ensure-authenticate.service";
 import {MarkdownModule} from "ngx-markdown";
-import {SelectedBranchService} from "./@data/services/branch/selected-branch.service";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import {BranchService} from "./@data/services/branch/branch.service";
 
 @NgModule({
   declarations: [
@@ -24,7 +23,7 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
     BrowserAnimationsModule,
     MarkdownModule.forRoot()
   ],
-  providers: [EnsureAuthenticateService, SelectedBranchService],
+  providers: [EnsureAuthenticateService, BranchService],
   bootstrap: [AppComponent],
 })
 export class AppModule { }

@@ -1,0 +1,18 @@
+@import "src/app/@theme/theme";
+
+.actions {
+  display: flex;
+  gap: 16px;
+}
+
+.title {
+  color: $text-color;
+}
+
+.ab-modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+}
+

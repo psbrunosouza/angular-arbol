@@ -1,13 +1,31 @@
-<div  (click)="selectBranch(branch.id)" *ngIf="branch" class="branch-container" >
-  <div class="branch-content">
-    <div class="branch-arrow">
-      <ab-icon (click)="loadBranch(branch.id)" [selected]="true" [icon]="arrowStatus" ></ab-icon>
+<div (click)="selectBranch(currentBranch.id)" *ngIf="currentBranch.id" class="tree-item" >
+  <div class="tree-item__content">
+    <div>
+      <div class="tree-item__content__arrow">
+        <ab-icon (click)="loadBranch(currentBranch.id)" [selected]="true" [icon]="arrowStatus" ></ab-icon>
+      </div>
+      <div class="tree-item__content__name">
+        <p>{{currentBranch.name}}</p>
+      </div>
     </div>
-    <div class="branch-name">
-      <p>{{branch.name}}</p>
+    <div>
+      <ab-button (click)="modalAddBranch.changeModalVisibility()" use="fill">
+        <i class="bi bi-plus" ></i>
+      </ab-button>
     </div>
   </div>
-<!--  <div class="branch-quantity">-->
-<!--    <p>{{branch.childrenQtd ?? 0}}</p>-->
-<!--  </div>-->
 </div>
+
+<ab-modal size="medium" [isCompact]="false" #modalAddBranch>
+  <ab-modal-header>
+    <ab-label><h5>Criar novo tarefa</h5></ab-label>
+  </ab-modal-header>
+  <ab-modal-body>
+    <ab-input name="name" [(ngModel)]="branch.name" placeholder="Título"></ab-input>
+    <ab-textarea name="description" [(ngModel)]="branch.description" placeholder="# Anotações..."></ab-textarea>
+  </ab-modal-body>
+  <ab-modal-footer class="ab-modal-footer">
+    <ab-button (click)="modalAddBranch.changeModalVisibility()" type="button" class="me-3" use="link">Cancelar</ab-button>
+    <ab-button (click)="addBranch(modalAddBranch)" type="button"  use="fill">Confirmar</ab-button>
+  </ab-modal-footer>
+</ab-modal>

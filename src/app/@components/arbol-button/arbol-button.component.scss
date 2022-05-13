@@ -1,6 +1,12 @@
 @import "../../@theme/theme";
 
-.arbol-button{
+@mixin arbol-button--disabled {
+  &:disabled {
+    filter: brightness(0.7);
+  }
+}
+
+.arbol-fill{
   button {
     width: 100%;
     border: 1px solid $first-color;
@@ -8,15 +14,20 @@
     outline: none;
     color: $text-contrast-color;
     border-radius: 2px;
-    padding: 5px;
     text-transform: uppercase;
     font-weight: bold;
+    transition: 0.2s;
+
+    &:hover {
+      filter: brightness(0.90);
+    }
+
+    @include arbol-button--disabled;
   }
 }
 
 .arbol-outline {
   button {
-    padding: 5px;
     width: 100%;
     outline: none;
     border: 1px solid $first-color;
@@ -25,6 +36,9 @@
     border-radius: 2px;
     text-transform: uppercase;
     font-weight: bold;
+    transition: 0.2s;
+
+    @include arbol-button--disabled;
   }
 }
 
@@ -38,6 +52,9 @@
     background: transparent !important;
     text-transform: uppercase;
     font-weight: bold;
+    transition: 0.2s;
+
+    @include arbol-button--disabled;
   }
 }
 

@@ -13,7 +13,7 @@ export class ThemeService implements IThemeService{
   constructor() { }
 
   init(): void {
-    this.setActiveTheme(LIGHT);
+    this.setActiveTheme(DARK);
   }
 
   getAvailableThemes(): Theme[] {
