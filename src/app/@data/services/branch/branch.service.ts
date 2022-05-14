@@ -51,7 +51,7 @@ export class BranchService implements IBranchService{
   update(branch: BranchModel): Observable<BranchModel> {
     return this.http.put<BranchModel, BranchModel>({
       baseUrl: environment.baseUrl,
-      resource: this.url,
+      resource: `${this.url}/${branch.id}`,
       payload: branch
     });
   }
