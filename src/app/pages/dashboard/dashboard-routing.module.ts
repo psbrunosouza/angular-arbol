@@ -5,7 +5,8 @@ import {TaskComponent} from "./task/task.component";
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'task'
+    redirectTo: 'task',
+    pathMatch: 'prefix'
   },
   {
     path: 'task',
