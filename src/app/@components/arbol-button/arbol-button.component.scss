@@ -1,61 +1,11 @@
-@import "../../@theme/theme";
-
-@mixin arbol-button--disabled {
-  &:disabled {
-    filter: brightness(0.7);
-  }
+.button-style-full {
+  @apply bg-purple-400;
+  @apply text-white;
+  @apply hover:bg-purple-500;
 }
 
-.arbol-fill{
-  button {
-    width: 100%;
-    border: 1px solid $first-color;
-    background: $first-color;
-    outline: none;
-    color: $text-contrast-color;
-    border-radius: 2px;
-    text-transform: uppercase;
-    font-weight: bold;
-    transition: 0.2s;
-
-    &:hover {
-      filter: brightness(0.90);
-    }
-
-    @include arbol-button--disabled;
-  }
+.button-style-clear {
+  @apply bg-gray-100;
+  @apply text-gray-400;
+  @apply hover:bg-gray-200;
 }
-
-.arbol-outline {
-  button {
-    width: 100%;
-    outline: none;
-    border: 1px solid $first-color;
-    color: $text-color;
-    background: transparent !important;
-    border-radius: 2px;
-    text-transform: uppercase;
-    font-weight: bold;
-    transition: 0.2s;
-
-    @include arbol-button--disabled;
-  }
-}
-
-
-.arbol-link {
-  button {
-    width: 100%;
-    outline: none;
-    border: none;
-    color: $text-color;
-    background: transparent !important;
-    text-transform: uppercase;
-    font-weight: bold;
-    transition: 0.2s;
-
-    @include arbol-button--disabled;
-  }
-}
-
-

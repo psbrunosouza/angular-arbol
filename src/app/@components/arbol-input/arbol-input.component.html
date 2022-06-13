@@ -1,16 +1,18 @@
-<div class="arbol-container">
-  <div class="arbol-input">
-    <ng-content select="[pre]"></ng-content>
+<div class="my-3">
+  <div>
+    <label *ngIf="label" class="text-purple-400 font-bold ">{{label}}</label>
+  </div>
+  <div class="bg-gray-100 w-full rounded">
     <input
+      class="p-2.5 w-full rounded bg-transparent border-purple-200 outline-purple-200"
       [required]="required"
       [disabled]="disabled"
       [type]="type"
-      [placeholder]="placeholder ?? ''"
+      [placeholder]="placeholder"
       [(ngModel)]="data"
       (input)="onChange()"
       (change)="onChange()"
       (blur)="onTouchedFn()"
     />
-    <ng-content select="[pos]"></ng-content>
   </div>
 </div>

@@ -34,18 +34,9 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss",
-              "./node_modules/bootstrap/dist/css/bootstrap.min.css",
-              "./node_modules/prismjs/themes/prism-okaidia.css"
+              "src/styles.scss"
             ],
             "scripts": [
-              "./node_modules/bootstrap/dist/js/bootstrap.min.js",
-              "./node_modules/@popperjs/core/dist/umd/popper.min.js",
-              "./node_modules/bootstrap/dist/js/bootstrap.min.js",
-              "./node_modules/prismjs/prism.js",
-              "./node_modules/prismjs/components/prism-csharp.min.js",
-              "./node_modules/prismjs/components/prism-css.min.js",
-              "./node_modules/marked/marked.min.js"
             ]
           },
           "configurations": {
@@ -112,18 +103,9 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss",
-              "./node_modules/bootstrap/dist/css/bootstrap.min.css",
-              "./node_modules/prismjs/themes/prism-okaidia.css"
+              "src/styles.scss"
             ],
             "scripts": [
-              "./node_modules/bootstrap/dist/js/bootstrap.min.js",
-              "./node_modules/@popperjs/core/dist/umd/popper.min.js",
-              "./node_modules/bootstrap/dist/js/bootstrap.min.js",
-              "./node_modules/prismjs/prism.js",
-              "./node_modules/prismjs/components/prism-csharp.min.js",
-              "./node_modules/prismjs/components/prism-css.min.js",
-              "./node_modules/marked/marked.min.js"
             ]
           }
         }

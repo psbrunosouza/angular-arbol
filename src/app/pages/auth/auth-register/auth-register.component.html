@@ -18,17 +18,17 @@
         <div>
           <ab-input name="password" [(ngModel)]="user.password" #passwordInput placeholder="Senha" type="password">
             <ab-icon color="#9373ED" [icon]="'bi bi-key-fill'" pre></ab-icon>
-            <ab-button use="link" color="#6f3aa1" (click)="passwordInput.togglePassword()" pos>
-              <ab-icon color="#9373ED" [icon]="passwordInput.type !== 'password' ? 'bi bi-eye-fill' : 'bi bi-eye-slash-fill'"></ab-icon>
-            </ab-button>
+<!--            <ab-button use="link" color="#6f3aa1" (click)="passwordInput.togglePassword()" pos>-->
+<!--              <ab-icon color="#9373ED" [icon]="passwordInput.type !== 'password' ? 'bi bi-eye-fill' : 'bi bi-eye-slash-fill'"></ab-icon>-->
+<!--            </ab-button>-->
           </ab-input>
         </div>
         <div>
           <ab-input #repeatPasswordInput placeholder="Repetir a senha" type="password">
             <ab-icon color="#9373ED" [icon]="'bi bi-key-fill'" pre></ab-icon>
-            <ab-button use="link" color="#6f3aa1" (click)="repeatPasswordInput.togglePassword()" pos>
-              <ab-icon color="#9373ED" [icon]="passwordInput.type !== 'password' ? 'bi bi-eye-fill' : 'bi bi-eye-slash-fill'"></ab-icon>
-            </ab-button>
+<!--            <ab-button use="link" color="#6f3aa1" (click)="repeatPasswordInput.togglePassword()" pos>-->
+<!--              <ab-icon color="#9373ED" [icon]="passwordInput.type !== 'password' ? 'bi bi-eye-fill' : 'bi bi-eye-slash-fill'"></ab-icon>-->
+<!--            </ab-button>-->
           </ab-input>
         </div>
         <ab-button (click)="submit()" type="submit" use="fill">Cadastrar</ab-button>

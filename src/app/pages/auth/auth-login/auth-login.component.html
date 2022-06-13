@@ -1,26 +1,28 @@
-<form>
-  <div class="page">
-    <div class="content row justify-content-center align-items-center p-0 m-0">
-      <div class="form">
-        <div class="d-flex justify-content-center mb-3">
-          <img width="64px" alt="" src="../../../../assets/imgs/arbol-icon.svg" />
+<main class="bg-gray-50/20 h-screen w-full overflow-hidden flex flex-col justify-between item-center">
+  <section class="p-6">
+    <h1 class="text-lg text-purple-400 font-bold">Acesso</h1>
+  </section>
+  <section class="flex-1 flex justify-center items-center">
+    <form class="h-full w-full flex flex-col justify-center  p-6">
+      <div>
+        <div class="flex justify-center text-purple-400">
+          <img src="assets/imgs/icon.svg" class="w-32 h-32 text-purple-400" alt="icon"/>
         </div>
-        <div>
-          <ab-input name="email" [(ngModel)]="user.email" placeholder="E-mail">
-            <ab-icon  [icon]="'bi bi-envelope-fill'" pre></ab-icon>
-          </ab-input>
-        </div>
-        <div>
-          <ab-input name="name" [(ngModel)]="user.password" #passwordInput placeholder="Password" type="password">
-            <ab-icon [icon]="'bi bi-key-fill'" pre></ab-icon>
-            <ab-button use="link" (click)="passwordInput.togglePassword()" pos>
-              <ab-icon  [icon]="passwordInput.type !== 'password' ? 'bi bi-eye-fill' : 'bi bi-eye-slash-fill'"></ab-icon>
-            </ab-button>
-          </ab-input>
-        </div>
-        <ab-button (click)="submit()" type="submit" use="fill">Acessar</ab-button>
-        <ab-link [to]="['../register']">Criar uma conta</ab-link>
+
+        <ab-input placeholder="E-mail" label="E-mail"></ab-input>
+
+        <ab-input placeholder="Password" label="Password"></ab-input>
+
+        <ab-button type="submit" buttonStyle="full">
+          Entrar
+        </ab-button>
+
+        <ab-button type="button" buttonStyle="clear">
+          <span class="hidden md:block">Não possui uma conta ?</span><span class="md:text-purple-400">Cadastrar</span>
+        </ab-button>
       </div>
-    </div>
-  </div>
-</form>
+    </form>
+  </section>
+  <section class="w-full h-8 bg-purple-400">
+  </section>
+</main>

@@ -6,7 +6,6 @@ import {ComponentsModule} from "./@components/components.module";
 import {LayoutModule} from "./@layout/layout.module";
 import {HttpClientModule} from "@angular/common/http";
 import {EnsureAuthenticateService} from "./@data/services/auth/ensure-authenticate.service";
-import {MarkdownModule} from "ngx-markdown";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {BranchService} from "./@data/services/branch/branch.service";
 
@@ -21,7 +20,6 @@ import {BranchService} from "./@data/services/branch/branch.service";
     LayoutModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    MarkdownModule.forRoot()
   ],
   providers: [EnsureAuthenticateService, BranchService],
   bootstrap: [AppComponent],

@@ -5,7 +5,6 @@ import { DashboardRoutingModule } from './dashboard-routing.module';
 import { DashboardComponent } from './dashboard.component';
 import { TaskComponent } from './task/task.component';
 import {LayoutModule} from "../../@layout/layout.module";
-import {MarkdownModule} from "ngx-markdown";
 import {FormsModule} from "@angular/forms";
 import {ComponentsModule} from "../../@components/components.module";
 import { MarkdownDisplayComponent } from './task/markdown-display/markdown-display.component';
@@ -21,7 +20,6 @@ import { MarkdownDisplayComponent } from './task/markdown-display/markdown-displ
     CommonModule,
     DashboardRoutingModule,
     LayoutModule,
-    MarkdownModule,
     FormsModule,
     ComponentsModule
   ]
