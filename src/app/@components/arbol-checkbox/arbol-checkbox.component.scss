@@ -1,0 +1,28 @@
+.checkbox {
+  @apply w-[22px];
+  @apply h-[22px];
+  @apply md:w-[18px];
+  @apply md:h-[18px];
+  @apply border-2;
+  @apply border-arbol-400;
+
+  .checkbox-mark {
+    @apply text-[22px];
+    @apply text-[22px];
+    @apply md:text-[16px];
+    @apply md:text-[16px];
+  }
+}
+
+.checkbox--selected {
+  @apply bg-arbol-300;
+  @apply text-white;
+}
+
+.checkbox--unselected {
+  @apply bg-white;
+  @apply text-arbol-400;
+}
+
+
+

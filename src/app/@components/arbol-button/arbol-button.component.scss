@@ -1,11 +1,17 @@
 .button-style-full {
-  @apply bg-purple-400;
+  @apply bg-arbol-400;
   @apply text-white;
-  @apply hover:bg-purple-500;
+  @apply hover:bg-arbol-500;
+  @apply transition-all;
+  @apply ease-in-out;
+  @apply duration-200;
 }
 
 .button-style-clear {
   @apply bg-gray-100;
   @apply text-gray-400;
   @apply hover:bg-gray-200;
+  @apply transition-all;
+  @apply ease-in-out;
+  @apply duration-200;
 }

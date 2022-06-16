@@ -1,28 +1,39 @@
-<main class="bg-gray-50/20 h-screen w-full overflow-hidden flex flex-col justify-between item-center">
-  <section class="p-6">
-    <h1 class="text-lg text-purple-400 font-bold">Acesso</h1>
+<main class="relative bg-gray-100 h-screen w-full overflow-hidden md:flex md:justify-center md:items-center">
+  <section class="hidden md:block absolute left-0 top-0  -m-80">
+    <img   src="assets/imgs/bg-top.svg" alt=""/>
   </section>
-  <section class="flex-1 flex justify-center items-center">
-    <form class="h-full w-full flex flex-col justify-center  p-6">
-      <div>
-        <div class="flex justify-center text-purple-400">
-          <img src="assets/imgs/icon.svg" class="w-32 h-32 text-purple-400" alt="icon"/>
+  <section
+    class="z-50 h-full w-full bg-white flex flex-col justify-between md:border-2 md:rounded md:border-gray-100 md:w-[420px] md:h-auto">
+    <div class="p-6">
+      <h1 class="text-lg text-arbol-400 font-bold">Acesso</h1>
+    </div>
+    <div class="flex-1 flex justify-center items-center">
+      <form class="h-full w-full flex flex-col justify-center  p-6">
+        <div>
+          <div class="flex justify-center fill-arbol-400">
+            <img src="assets/imgs/icon.svg" class="w-32 h-32 fill-arbol-400" alt="icon"/>
+          </div>
+
+          <ab-input placeholder="E-mail" label="E-mail"></ab-input>
+
+          <ab-input placeholder="Password" label="Password"></ab-input>
+
+          <arbol-checkbox label="Relembre-me"></arbol-checkbox>
+
+          <ab-button type="submit" buttonStyle="full">
+            Entrar
+          </ab-button>
+
+          <ab-button type="button" buttonStyle="clear">
+            <span class="hidden md:block">Não possui uma conta ?</span><span class="md:text-arbol-400">Cadastrar</span>
+          </ab-button>
         </div>
-
-        <ab-input placeholder="E-mail" label="E-mail"></ab-input>
-
-        <ab-input placeholder="Password" label="Password"></ab-input>
-
-        <ab-button type="submit" buttonStyle="full">
-          Entrar
-        </ab-button>
-
-        <ab-button type="button" buttonStyle="clear">
-          <span class="hidden md:block">Não possui uma conta ?</span><span class="md:text-purple-400">Cadastrar</span>
-        </ab-button>
-      </div>
-    </form>
+      </form>
+    </div>
+    <div class="w-full h-8 bg-arbol-400">
+    </div>
   </section>
-  <section class="w-full h-8 bg-purple-400">
+  <section class="hidden md:block absolute right-0 bottom-0 -mb-[720px] -mr-[600px]">
+    <img  src="assets/imgs/bg-bottom.svg" alt=""/>
   </section>
 </main>
