@@ -2,7 +2,7 @@ import {Component, Input, OnInit} from '@angular/core';
 
 type IButtonType = "button" | "submit" | "reset";
 
-type IButtonStyle = "full" | "clear";
+type IButtonStyle = "full" | "basic" | "clear";
 
 @Component({
   selector: 'ab-button',

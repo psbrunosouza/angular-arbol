@@ -1,18 +1,4 @@
 <app-page>
-  <div header>
-    <app-header>
-      <ab-input-text (inputTextBlurEvent)="updateBranchName(branch)"  [(ngModel)]="branch.name" title></ab-input-text>
-      <div class="actions" actions>
-        <ab-button [disabled]="!branch.id" (click)="updateBranch(branch)" use="fill">
-          <ab-icon color="#fff" icon="bi bi-pencil-square"></ab-icon>
-        </ab-button>
-
-        <ab-button [disabled]="!branch.id" (click)="modal.changeModalVisibility()"  use="fill">
-          <ab-icon color="#fff" icon="bi bi-trash2"></ab-icon>
-        </ab-button>
-      </div>
-    </app-header>
-  </div>
   <div *ngIf="branch.id">
     <app-markdown-display  [active]="activeMarkdownContent" [data]="branch"></app-markdown-display>
   </div>
