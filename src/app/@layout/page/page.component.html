@@ -1,20 +1,21 @@
-<!--<ng-content select="[header]"></ng-content>-->
-<app-header>
-  <div class="flex justify-between">
-    <ab-button buttonStyle="clear">
-      <ab-icon icon="fas fa-bars"></ab-icon>
-    </ab-button>
-    <div class="flex gap-4">
-      <ab-button buttonStyle="full">
-        <ab-icon  icon="fas fa-edit"></ab-icon>
+<div>
+  <app-header>
+    <div class="flex justify-between">
+      <ab-button buttonStyle="clear">
+        <ab-icon icon="fas fa-bars"></ab-icon>
       </ab-button>
+      <div class="flex gap-4">
+        <ab-button buttonStyle="full">
+          <ab-icon  icon="fas fa-edit"></ab-icon>
+        </ab-button>
 
-      <ab-button buttonStyle="full">
-        <ab-icon  icon="fas fa-trash"></ab-icon>
-      </ab-button>
+        <ab-button buttonStyle="full">
+          <ab-icon  icon="fas fa-trash"></ab-icon>
+        </ab-button>
+      </div>
     </div>
+  </app-header>
+  <div class="h-[calc(100vh-68px-68px)] bg-gray-100">
+    <ng-content></ng-content>
   </div>
-</app-header>
-<div class="h-[calc(100vh-68px-68px)] bg-gray-100">
-  <ng-content></ng-content>
 </div>
