@@ -1,39 +1,37 @@
-<form>
-  <div class="page">
-    <div class="content row justify-content-center align-items-center p-0 m-0">
-      <div class="form">
-        <div class="d-flex justify-content-center mb-3">
-          <img width="64px" alt="" src="../../../../assets/imgs/arbol-icon.svg" />
-        </div>
-        <div>
-          <ab-input name="name" [(ngModel)]="user.name" placeholder="Nome">
-            <ab-icon color="#9373ED" [icon]="'bi bi-person-fill'" pre></ab-icon>
-          </ab-input>
-        </div>
-        <div>
-          <ab-input name="email" [(ngModel)]="user.email" placeholder="E-mail">
-            <ab-icon color="#9373ED" [icon]="'bi bi-envelope-fill'" pre></ab-icon>
-          </ab-input>
-        </div>
-        <div>
-          <ab-input name="password" [(ngModel)]="user.password" #passwordInput placeholder="Senha" type="password">
-            <ab-icon color="#9373ED" [icon]="'bi bi-key-fill'" pre></ab-icon>
-<!--            <ab-button use="link" color="#6f3aa1" (click)="passwordInput.togglePassword()" pos>-->
-<!--              <ab-icon color="#9373ED" [icon]="passwordInput.type !== 'password' ? 'bi bi-eye-fill' : 'bi bi-eye-slash-fill'"></ab-icon>-->
-<!--            </ab-button>-->
-          </ab-input>
-        </div>
-        <div>
-          <ab-input #repeatPasswordInput placeholder="Repetir a senha" type="password">
-            <ab-icon color="#9373ED" [icon]="'bi bi-key-fill'" pre></ab-icon>
-<!--            <ab-button use="link" color="#6f3aa1" (click)="repeatPasswordInput.togglePassword()" pos>-->
-<!--              <ab-icon color="#9373ED" [icon]="passwordInput.type !== 'password' ? 'bi bi-eye-fill' : 'bi bi-eye-slash-fill'"></ab-icon>-->
-<!--            </ab-button>-->
-          </ab-input>
-        </div>
-        <ab-button (click)="submit()" type="submit" use="fill">Cadastrar</ab-button>
-        <ab-link [to]="['../login']">Já possuo uma conta</ab-link>
-      </div>
+<main class="relative bg-gray-100 h-screen w-full overflow-hidden md:flex md:justify-center md:items-center">
+  <section class="hidden md:block absolute left-0 top-0  -m-80">
+    <img   src="assets/imgs/bg-top.svg" alt=""/>
+  </section>
+  <section
+    class="z-50 h-full w-full bg-white flex flex-col justify-between md:border-2 md:rounded md:border-gray-100 md:w-[420px] md:h-auto">
+    <div class="p-6">
+      <h1 class="text-lg text-arbol-400 font-bold">Cadastro</h1>
     </div>
-  </div>
-</form>
+    <div class="flex-1 flex justify-center items-center">
+      <form (ngSubmit)="submit()" class="h-full w-full flex flex-col justify-center  p-6">
+        <div>
+          <div class="flex justify-center fill-arbol-400">
+            <img src="assets/imgs/icon.svg" class="w-32 h-32 fill-arbol-400" alt="icon"/>
+          </div>
+
+          <ab-input name="email" [(ngModel)]="user.email" placeholder="E-mail" label="E-mail"></ab-input>
+
+          <ab-input name="password" [(ngModel)]="user.password"  placeholder="Password" label="Password"></ab-input>
+
+          <ab-button type="submit" buttonStyle="full">
+            Cadastrar
+          </ab-button>
+
+          <ab-button [routerLink]="['/auth/login']" type="button" buttonStyle="clear">
+            <span class="hidden md:block">Já possui uma conta ?</span><span class="md:text-arbol-400">Acessar</span>
+          </ab-button>
+        </div>
+      </form>
+    </div>
+    <div class="w-full h-8 bg-arbol-400">
+    </div>
+  </section>
+  <section class="hidden md:block absolute right-0 bottom-0 -mb-[720px] -mr-[600px]">
+    <img  src="assets/imgs/bg-bottom.svg" alt=""/>
+  </section>
+</main>

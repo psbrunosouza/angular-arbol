@@ -25,9 +25,10 @@ export class AuthLoginComponent implements OnInit {
   }
 
   submit(){
-    this.authService.auth(this.user).subscribe((authData) => {
-      this.ensureAuthenticateService.setToken(authData.token);
-      this.router.navigate(['/dashboard/task']);
-    });
+    console.log(this.user);
+    // this.authService.auth(this.user).subscribe((authData) => {
+    //   this.ensureAuthenticateService.setToken(authData.token);
+    //   this.router.navigate(['/dashboard/task']);
+    // });
   }
 }

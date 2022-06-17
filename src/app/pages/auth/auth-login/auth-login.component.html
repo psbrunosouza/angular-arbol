@@ -8,15 +8,15 @@
       <h1 class="text-lg text-arbol-400 font-bold">Acesso</h1>
     </div>
     <div class="flex-1 flex justify-center items-center">
-      <form class="h-full w-full flex flex-col justify-center  p-6">
+      <form (ngSubmit)="submit()" class="h-full w-full flex flex-col justify-center  p-6">
         <div>
           <div class="flex justify-center fill-arbol-400">
             <img src="assets/imgs/icon.svg" class="w-32 h-32 fill-arbol-400" alt="icon"/>
           </div>
 
-          <ab-input placeholder="E-mail" label="E-mail"></ab-input>
+          <ab-input name="email" [(ngModel)]="user.email" placeholder="E-mail" label="E-mail"></ab-input>
 
-          <ab-input placeholder="Password" label="Password"></ab-input>
+          <ab-input name="password" [(ngModel)]="user.password"  placeholder="Password" label="Password"></ab-input>
 
           <arbol-checkbox label="Relembre-me"></arbol-checkbox>
 
@@ -24,7 +24,7 @@
             Entrar
           </ab-button>
 
-          <ab-button type="button" buttonStyle="clear">
+          <ab-button [routerLink]="['/auth/register']" type="button" buttonStyle="clear">
             <span class="hidden md:block">Não possui uma conta ?</span><span class="md:text-arbol-400">Cadastrar</span>
           </ab-button>
         </div>

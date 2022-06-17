@@ -25,10 +25,10 @@ export class AuthRegisterComponent implements OnInit {
   }
 
   submit(): void {
-    this.userService.create(this.user).subscribe((res) => {
-      console.log(res);
-      this.router.navigate(['/dashboard/task']);
-    })
+    console.log(this.user);
+    // this.userService.create(this.user).subscribe((res) => {
+    //   this.router.navigate(['/dashboard/task']);
+    // })
   }
 
 }
