@@ -1,6 +1,4 @@
 import {Component, OnInit} from '@angular/core';
-import {ThemeService} from "../../@theme/theme.service";
-import {DARK, LIGHT} from "../../@theme/theme";
 
 interface IMenuItem {
   description: string;
@@ -18,39 +16,16 @@ interface IMenuItem {
 export class SidebarComponent implements OnInit {
 
   menuItems: IMenuItem[] = [{
-    icon: "bi bi-calendar-check",
+    icon: "fas fa-calendar",
     color: "#fff",
     link: "",
     description: "Tarefas"
   },
   ];
 
-  settingsItems: IMenuItem[] = [
-    {
-      link: "",
-      description: "Tema",
-      color: "#fff",
-      icon: "bi bi-moon-fill",
-      action: () => {
-        this.themeService.getActiveTheme() === LIGHT
-          ? this.themeService.setActiveTheme(DARK)
-          : this.themeService.setActiveTheme(LIGHT);
-      }
-    },
-    {
-      description: "Configurações",
-      color: "#fff",
-      icon: "bi bi-gear-fill",
-    }
-  ]
-
-  constructor(private themeService: ThemeService) {
+  constructor() {
   }
 
   ngOnInit(): void {
-  }
-
-  changeTheme(action: any): void {
-    action();
   }
 }
