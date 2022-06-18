@@ -25,7 +25,6 @@ export class AuthRegisterComponent implements OnInit {
   }
 
   submit(): void {
-    console.log(this.user);
     // this.userService.create(this.user).subscribe((res) => {
     //   this.router.navigate(['/dashboard/task']);
     // })

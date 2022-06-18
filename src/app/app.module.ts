@@ -24,8 +24,6 @@ import {QuillModule} from "ngx-quill";
     QuillModule.forRoot({
       modules: {
         syntax: true,
-        placeholder: 'Compose an epic...',
-        history: true,
         toolbar: [
           ['bold', 'italic', 'underline', 'strike'],        // toggled buttons
           ['blockquote', 'code-block'],

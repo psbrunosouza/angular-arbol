@@ -16,7 +16,6 @@ export class ArbolIconComponent implements OnInit {
   @Input() public selected?: boolean = false;
 
   get getSize(): string {
-    console.log(`w-[${this.size}px] h-[${this.size}px]`);
     return `w-[${this.size}px] h-[${this.size}px]`
   }
 

@@ -1,4 +1,5 @@
-import {Component, OnInit, ViewEncapsulation} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {MenuService} from "../../@data/services/subjects/menu/menu.service";
 
 @Component({
   selector: 'app-page',
@@ -7,9 +8,17 @@ import {Component, OnInit, ViewEncapsulation} from '@angular/core';
 })
 export class PageComponent implements OnInit {
 
-  constructor() { }
+  menuState: boolean = false;
+
+  constructor(private menuService: MenuService) {}
 
   ngOnInit(): void {
+    this.menuService.openMenuState$.subscribe((state) => {
+      this.menuState = state;
+    })
   }
 
+  openMenu(): void {
+    this.menuService.setMenuState = !this.menuState;
+  }
 }

@@ -7,7 +7,6 @@ import { TaskComponent } from './task/task.component';
 import {LayoutModule} from "../../@layout/layout.module";
 import {FormsModule} from "@angular/forms";
 import {ComponentsModule} from "../../@components/components.module";
-import { MarkdownDisplayComponent } from './task/markdown-display/markdown-display.component';
 import {QuillModule} from "ngx-quill";
 
 
@@ -15,7 +14,6 @@ import {QuillModule} from "ngx-quill";
   declarations: [
     DashboardComponent,
     TaskComponent,
-    MarkdownDisplayComponent
   ],
   imports: [
     CommonModule,

@@ -56,7 +56,6 @@ export class BranchComponent implements OnInit {
 
   addBranch(onSubmit: ArbolModalComponent): void {
     this.branchService.create({...this.branch, parent: this.currentBranch} as unknown as BranchModel).subscribe((branch) => {
-      console.log(branch);
       onSubmit.changeModalVisibility();
     })
   }
