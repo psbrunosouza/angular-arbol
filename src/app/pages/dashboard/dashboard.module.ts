@@ -8,6 +8,7 @@ import {LayoutModule} from "../../@layout/layout.module";
 import {FormsModule} from "@angular/forms";
 import {ComponentsModule} from "../../@components/components.module";
 import { MarkdownDisplayComponent } from './task/markdown-display/markdown-display.component';
+import {QuillModule} from "ngx-quill";
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { MarkdownDisplayComponent } from './task/markdown-display/markdown-displ
     DashboardRoutingModule,
     LayoutModule,
     FormsModule,
-    ComponentsModule
+    ComponentsModule,
+    QuillModule
   ]
 })
 export class DashboardModule { }

@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, Input, OnInit, ViewEncapsulation} from '@angular/core';
 
 type IButtonType = "button" | "submit" | "reset";
 
@@ -7,7 +7,8 @@ type IButtonStyle = "full" | "basic" | "clear";
 @Component({
   selector: 'ab-button',
   templateUrl: './arbol-button.component.html',
-  styleUrls: ['./arbol-button.component.scss']
+  styleUrls: ['./arbol-button.component.scss'],
+
 })
 export class ArbolButtonComponent implements OnInit {
 

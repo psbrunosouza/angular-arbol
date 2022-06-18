@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit, ViewEncapsulation} from '@angular/core';
 import {BranchModel} from "../../../@data/models/branch.model";
 import {BranchService} from "../../../@data/services/branch/branch.service";
 import {ActivatedRoute, Router} from "@angular/router";
@@ -9,6 +9,7 @@ import {ArbolModalComponent} from "../../../@components/arbol-modal/arbol-modal.
   templateUrl: './task.component.html',
   styleUrls: ['./task.component.scss'],
   providers: [],
+  encapsulation: ViewEncapsulation.None
 })
 export class TaskComponent implements OnInit {
 

@@ -1,16 +1,3 @@
 <app-page>
-  <div *ngIf="branch.id">
-    <app-markdown-display  [active]="activeMarkdownContent" [data]="branch"></app-markdown-display>
-  </div>
+  <quill-editor id="task-encapsulation" [sanitize]="true" placeholder="Start here"></quill-editor>
 </app-page>
-
-<!--<ab-modal size="medium" [isCompact]="false" #modal>-->
-<!--  <ab-modal-header><ab-label><h5>Remover Tarefa</h5></ab-label></ab-modal-header>-->
-<!--  <ab-modal-body>-->
-<!--    <p>Tem certeza de que deseja remover essa tarefa?</p>-->
-<!--  </ab-modal-body>-->
-<!--  <ab-modal-footer class="ab-modal-footer">-->
-<!--    <ab-button (click)="modal.changeModalVisibility()" type="button" class="me-3" use="link">Cancelar</ab-button>-->
-<!--    <ab-button (click)="onSubmit(branch, modal)" type="button"  use="fill">Confirmar</ab-button>-->
-<!--  </ab-modal-footer>-->
-<!--</ab-modal>-->
