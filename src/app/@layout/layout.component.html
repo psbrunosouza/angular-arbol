@@ -7,7 +7,9 @@
     </div>
     <app-sidebar class="md:hidden"></app-sidebar>
   </div>
-  <div #menuBody [class]="getMenuState + ' md:hidden w-full h-screen absolute bg-black opacity-60'"></div>
-  <div [class]="getMenuState + ' md:hidden absolute h-screen opacity-90 w-[280px] bg-white'"></div>
+  <div [@slidebg]="menuStateTransition" #menuBody [class]="' md:hidden w-full h-screen absolute bg-black opacity-60'"></div>
+  <div [@slide]="menuStateTransition" [class]="' md:hidden absolute h-screen  w-[280px] bg-white'">
+    <app-tree-structure  class="md:hidden"></app-tree-structure>
+  </div>
 </div>
 

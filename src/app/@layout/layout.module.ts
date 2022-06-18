@@ -31,7 +31,7 @@ import {FormsModule} from "@angular/forms";
     CommonModule,
     RouterModule,
     ComponentsModule,
-    FormsModule
+    FormsModule,
   ],
 })
 export class LayoutModule { }
