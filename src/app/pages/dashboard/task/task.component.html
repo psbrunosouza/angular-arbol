@@ -1,3 +1,10 @@
 <app-page>
-  <quill-editor id="task-encapsulation" [sanitize]="true" placeholder="Start here"></quill-editor>
+  <quill-editor *ngIf="branch.id; else noData" id="task-encapsulation" [sanitize]="true" placeholder="Start here"></quill-editor>
+  <ng-template #noData>
+    <div class="flex h-full flex-col justify-center items-center">
+      <img width="120px" height="120px" class="fill-arbol-50" src="assets/imgs/nodata.svg" alt="Nenhum dado encontrado" />
+      <span class="italic text-black/40">Ops... Nenhuma tarefa aqui, sinto muito.</span>
+    </div>
+  </ng-template>
 </app-page>
+

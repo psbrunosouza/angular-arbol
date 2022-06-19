@@ -15,8 +15,6 @@ export class TaskComponent implements OnInit {
 
   branch: BranchModel;
 
-  activeMarkdownContent: boolean = false;
-
   constructor(private branchService: BranchService, private activatedRoute: ActivatedRoute, private router: Router) {
   }
 
@@ -37,27 +35,27 @@ export class TaskComponent implements OnInit {
     });
   }
 
-  updateBranch(branch: BranchModel): void {
-    const branchToUpdate: BranchModel = <BranchModel>{
-      description: branch.description,
-      name: branch.name,
-      id: branch.id,
-      user: branch.user,
-      category: branch.category,
-      status: branch.status
-    }
-
-    if (this.activeMarkdownContent) {
-      this.branchService.update(branchToUpdate).subscribe(() => {
-        /**
-         * TODO: put here any toast to inform the user that the branch was created
-         */
-      })
-      this.activeMarkdownContent = false;
-    } else {
-      this.activeMarkdownContent = true;
-    }
-  }
+  // updateBranch(branch: BranchModel): void {
+  //   const branchToUpdate: BranchModel = <BranchModel>{
+  //     description: branch.description,
+  //     name: branch.name,
+  //     id: branch.id,
+  //     user: branch.user,
+  //     category: branch.category,
+  //     status: branch.status
+  //   }
+  //
+  //   if (this.activeMarkdownContent) {
+  //     this.branchService.update(branchToUpdate).subscribe(() => {
+  //       /**
+  //        * TODO: put here any toast to inform the user that the branch was created
+  //        */
+  //     })
+  //     this.activeMarkdownContent = false;
+  //   } else {
+  //     this.activeMarkdownContent = true;
+  //   }
+  // }
 
   onSubmit(branch: BranchModel, modal: ArbolModalComponent): void {
     this.branchService.delete(branch.id).subscribe(() => {
