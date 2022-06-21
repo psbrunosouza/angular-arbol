@@ -1,4 +1,4 @@
-<main>
+<main class="w-[280px]">
   <section class="p-4">
     <ab-button (click)="createBranchDialog.changeModalVisibility()" type="button">
       Adicionar
@@ -14,7 +14,13 @@
     <h1 class="text-2xl font-bold">Criar tarefa</h1>
   </ab-modal-header>
   <ab-modal-body>
-
+    <div>
+      <ab-label>Título</ab-label>
+      <ab-input placeholder="nome da minha tarefa"></ab-input>
+    </div>
+    <div>
+      <quill-editor id="task-encapsulation-d" [sanitize]="true" placeholder="Start here"></quill-editor>
+    </div>
   </ab-modal-body>
   <ab-modal-footer>
     <div class="flex gap-4 justify-end">

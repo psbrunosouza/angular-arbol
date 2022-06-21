@@ -1,0 +1,12 @@
+#task-encapsulation-d {
+  .ql-editor {
+    @apply h-full;
+    @apply max-h-[95px];
+    @apply border-0;
+  }
+
+  .ql-toolbar {
+    @apply bg-white;
+    @apply border-0;
+  }
+}

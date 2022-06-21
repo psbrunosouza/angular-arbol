@@ -11,6 +11,7 @@ import {ComponentsModule} from "../@components/components.module";
 import { BranchComponent } from './tree-structure/tree-view/branch/branch.component';
 import { TreeViewComponent } from './tree-structure/tree-view/tree-view.component';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {QuillModule} from "ngx-quill";
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
     RouterModule,
     ComponentsModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    QuillModule
   ],
 })
 export class LayoutModule { }
