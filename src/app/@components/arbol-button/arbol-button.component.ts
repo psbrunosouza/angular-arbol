@@ -1,8 +1,8 @@
-import {Component, Input, OnInit, ViewEncapsulation} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 
 type IButtonType = "button" | "submit" | "reset";
 
-type IButtonStyle = "full" | "basic" | "clear";
+type IButtonStyle = "full" | "basic" | "success" | "danger" | "clear";
 
 @Component({
   selector: 'ab-button',

@@ -10,7 +10,16 @@
 </main>
 
 <ab-modal #createBranchDialog>
-  <ab-modal-header></ab-modal-header>
-  <ab-modal-body></ab-modal-body>
-  <ab-modal-footer></ab-modal-footer>
+  <ab-modal-header>
+    <h1 class="text-2xl font-bold">Criar tarefa</h1>
+  </ab-modal-header>
+  <ab-modal-body>
+
+  </ab-modal-body>
+  <ab-modal-footer>
+    <div class="flex gap-4 justify-end">
+      <ab-button buttonStyle="danger"><i class="fas fa-times md:hidden"></i> <span class="hidden md:flex">Cancelar</span></ab-button>
+      <ab-button buttonStyle="success"><i class="fas fa-check md:hidden"></i> <span class="hidden md:flex">Confirmar</span></ab-button>
+    </div>
+  </ab-modal-footer>
 </ab-modal>

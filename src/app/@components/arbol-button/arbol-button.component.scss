@@ -24,3 +24,21 @@
   @apply ease-in-out;
   @apply duration-200;
 }
+
+.button-style-success {
+  @apply bg-green-500;
+  @apply text-white;
+  @apply hover:bg-green-600;
+  @apply transition-all;
+  @apply ease-in-out;
+  @apply duration-200;
+}
+
+.button-style-danger {
+  @apply bg-red-500;
+  @apply text-white;
+  @apply hover:bg-red-600;
+  @apply transition-all;
+  @apply ease-in-out;
+  @apply duration-200;
+}

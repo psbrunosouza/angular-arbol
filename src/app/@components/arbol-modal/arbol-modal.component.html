@@ -2,20 +2,20 @@
     <section #modal  class="top-0 left-0 absolute bg-black opacity-60 w-full h-full"></section>
     <div class="w-full absolute bottom-0 left-0 h-3/4 justify-center items-end">
       <section class="flex flex-col h-full w-full">
-        <div class="bg-white flex justify-between p-3">
-          <div>
+        <div class="bg-white border-b-2 border-gray-200 flex justify-between py-3 px-5">
+          <div class="w-full h-full">
             <ng-content select="ab-modal-header"></ng-content>
           </div>
-          <div>
+          <div class="ml-3">
             <ab-button (click)="isOpen = !isOpen" buttonStyle="basic">
               <i class="fas fa-times"></i>
             </ab-button>
           </div>
         </div>
-        <div class="flex-1 p-3 bg-white">
+        <div class="flex-1 py-3 px-5 bg-white">
           <ng-content select="ab-modal-body"></ng-content>
         </div>
-        <div class="bg-white p-3">
+        <div class="bg-white py-3 px-5">
           <ng-content select="ab-modal-footer"></ng-content>
         </div>
       </section>
