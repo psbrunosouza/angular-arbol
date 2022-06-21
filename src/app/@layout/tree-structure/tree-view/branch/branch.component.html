@@ -9,23 +9,10 @@
       </div>
     </div>
     <div>
-      <ab-button (click)="modalAddBranch.changeModalVisibility()" use="fill">
+      <ab-button  use="fill">
         <i class="bi bi-plus" ></i>
       </ab-button>
     </div>
   </div>
 </div>
 
-<ab-modal size="medium" [isCompact]="false" #modalAddBranch>
-  <ab-modal-header>
-    <ab-label><h5>Criar novo tarefa</h5></ab-label>
-  </ab-modal-header>
-  <ab-modal-body>
-    <ab-input name="name" [(ngModel)]="branch.name" placeholder="Título"></ab-input>
-    <ab-textarea name="description" [(ngModel)]="branch.description" placeholder="# Anotações..."></ab-textarea>
-  </ab-modal-body>
-  <ab-modal-footer class="ab-modal-footer">
-    <ab-button (click)="modalAddBranch.changeModalVisibility()" type="button" class="me-3" use="link">Cancelar</ab-button>
-    <ab-button (click)="addBranch(modalAddBranch)" type="button"  use="fill">Confirmar</ab-button>
-  </ab-modal-footer>
-</ab-modal>

@@ -1,13 +1,24 @@
-  <div #modal  class="ab-modal-container"  [ngClass]="{'modal-is-closed': !isOpen}">
-    <div class="ab-modal" [ngClass]="getSelectedSize">
-      <div *ngIf="!isCompact" class="ab-modal-header">
-        <ng-content select="ab-modal-header"></ng-content>
-      </div>
-      <div class="ab-modal-body">
-        <ng-content select="ab-modal-body"></ng-content>
-      </div>
-      <div *ngIf="!isCompact"  class="ab-modal-footer">
-        <ng-content select="ab-modal-footer"></ng-content>
-      </div>
+  <main  class="" [class]="'top-0 left-0 absolute w-screen h-screen justify-center items-center ' + getIsOpen">
+    <section #modal  class="top-0 left-0 absolute bg-black opacity-60 w-full h-full"></section>
+    <div class="w-full absolute bottom-0 left-0 h-3/4 justify-center items-end">
+      <section class="flex flex-col h-full w-full">
+        <div class="bg-white flex justify-between p-3">
+          <div>
+            <ng-content select="ab-modal-header"></ng-content>
+          </div>
+          <div>
+            <ab-button (click)="isOpen = !isOpen" buttonStyle="basic">
+              <i class="fas fa-times"></i>
+            </ab-button>
+          </div>
+        </div>
+        <div class="flex-1 p-3 bg-white">
+          <ng-content select="ab-modal-body"></ng-content>
+        </div>
+        <div class="bg-white p-3">
+          <ng-content select="ab-modal-footer"></ng-content>
+        </div>
+      </section>
     </div>
-  </div>
+  </main>
+

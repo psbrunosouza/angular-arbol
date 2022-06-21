@@ -5,7 +5,7 @@ import { DashboardRoutingModule } from './dashboard-routing.module';
 import { DashboardComponent } from './dashboard.component';
 import { TaskComponent } from './task/task.component';
 import {LayoutModule} from "../../@layout/layout.module";
-import {FormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {ComponentsModule} from "../../@components/components.module";
 import {QuillModule} from "ngx-quill";
 
@@ -21,7 +21,8 @@ import {QuillModule} from "ngx-quill";
     LayoutModule,
     FormsModule,
     ComponentsModule,
-    QuillModule
+    QuillModule,
+    ReactiveFormsModule
   ]
 })
 export class DashboardModule { }

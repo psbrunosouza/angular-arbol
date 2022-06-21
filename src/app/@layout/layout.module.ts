@@ -10,7 +10,7 @@ import { PageComponent } from './page/page.component';
 import {ComponentsModule} from "../@components/components.module";
 import { BranchComponent } from './tree-structure/tree-view/branch/branch.component';
 import { TreeViewComponent } from './tree-structure/tree-view/tree-view.component';
-import {FormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -32,6 +32,7 @@ import {FormsModule} from "@angular/forms";
     RouterModule,
     ComponentsModule,
     FormsModule,
+    ReactiveFormsModule
   ],
 })
 export class LayoutModule { }
