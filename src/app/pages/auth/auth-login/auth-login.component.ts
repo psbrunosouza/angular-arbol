@@ -24,7 +24,7 @@ export class AuthLoginComponent implements OnInit {
     }
   }
 
-  submit(){
+  submit(): void{
     this.authService.auth(this.user).subscribe((authData) => {
       this.ensureAuthenticateService.setToken(authData.token);
       this.router.navigate(['/dashboard/task']);

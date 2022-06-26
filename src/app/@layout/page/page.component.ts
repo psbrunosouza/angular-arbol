@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {MenuService} from "../../@data/services/subjects/menu/menu.service";
 
 @Component({
@@ -7,6 +7,8 @@ import {MenuService} from "../../@data/services/subjects/menu/menu.service";
   styleUrls: ['./page.component.scss'],
 })
 export class PageComponent implements OnInit {
+
+  @Input() title: string = "";
 
   menuState: boolean = false;
 

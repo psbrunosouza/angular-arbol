@@ -5,7 +5,7 @@
     </ab-button>
   </section>
   <section>
-<!--    <app-tree-view  [branches]="branches"></app-tree-view>-->
+    <app-tree-view  [branches]="branches"></app-tree-view>
   </section>
 </main>
 
@@ -16,16 +16,23 @@
   <ab-modal-body>
     <div>
       <ab-label>Título</ab-label>
-      <ab-input placeholder="nome da minha tarefa"></ab-input>
+      <ab-input [(ngModel)]="branch.name" placeholder="nome da minha tarefa"></ab-input>
     </div>
     <div>
-      <quill-editor id="task-encapsulation-d" [sanitize]="true" placeholder="Start here"></quill-editor>
+      <quill-editor
+        id="task-encapsulation-d"
+        [(ngModel)]="branch.description"
+        [sanitize]="true"
+        placeholder="Start here">
+      </quill-editor>
     </div>
   </ab-modal-body>
   <ab-modal-footer>
     <div class="flex gap-4 justify-end">
-      <ab-button buttonStyle="danger"><i class="fas fa-times md:hidden"></i> <span class="hidden md:flex">Cancelar</span></ab-button>
-      <ab-button buttonStyle="success"><i class="fas fa-check md:hidden"></i> <span class="hidden md:flex">Confirmar</span></ab-button>
+      <ab-button buttonStyle="danger" (click)="createBranchDialog.changeModalVisibility()"><span><i
+        class="fas fa-times md:hidden"></i></span> <span class="hidden md:flex">Cancelar</span></ab-button>
+      <ab-button (click)="onSubmit(branch, createBranchDialog)" buttonStyle="success"><span><i
+        class="fas fa-check md:hidden"></i></span> <span class="hidden md:flex">Confirmar</span></ab-button>
     </div>
   </ab-modal-footer>
 </ab-modal>

@@ -9,21 +9,14 @@ import {
   Renderer2,
   ViewChild
 } from '@angular/core';
-import {NG_VALUE_ACCESSOR} from "@angular/forms";
+import {ControlValueAccessor, NG_VALUE_ACCESSOR} from "@angular/forms";
 
 @Component({
   selector: 'ab-input-text',
   templateUrl: './arbol-input-text.component.html',
   styleUrls: ['./arbol-input-text.component.scss'],
-  providers: [
-    {
-      provide: NG_VALUE_ACCESSOR,
-      useExisting: forwardRef(() => ArbolInputTextComponent),
-      multi: true
-    }
-  ]
 })
-export class ArbolInputTextComponent implements OnInit {
+export class ArbolInputTextComponent implements OnInit, ControlValueAccessor {
 
   @Output() inputTextBlurEvent: EventEmitter<null> = new EventEmitter<null>();
 

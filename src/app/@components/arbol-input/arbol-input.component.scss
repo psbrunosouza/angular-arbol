@@ -1,1 +1,8 @@
-
+.input {
+  .input-field {
+    @apply bg-gray-100 w-full rounded;
+    input {
+      @apply p-2.5 w-full rounded bg-transparent border-arbol-200 outline-arbol-200;
+    }
+  }
+}

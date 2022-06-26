@@ -1,11 +1,9 @@
-<div class="arbol-input-container">
-  <div class="arbol-input-container-element">
-    <input
-      [(ngModel)]="data"
-      (input)="onChange()"
-      (change)="onChange()"
-      (blur)="onBlur()"
-
-    />
-  </div>
+<div class="bg-gray-100 w-full rounded">
+  <input
+    class="p-2.5 w-full rounded bg-transparent border-arbol-200 outline-arbol-200"
+    [(ngModel)]="data"
+    (input)="onChange()"
+    (change)="onChange()"
+    (blur)="onBlur()"
+  />
 </div>

@@ -1,5 +1,5 @@
-<app-page>
-  <quill-editor *ngIf="branch.id; else noData" id="task-encapsulation" [sanitize]="true" placeholder="Start here"></quill-editor>
+<app-page [title]="branch.name">
+  <quill-editor *ngIf="branch.id; else noData" id="task-encapsulation" [(ngModel)]="branch.description" [sanitize]="true" placeholder="Start here"></quill-editor>
   <ng-template #noData>
     <div class="flex h-full flex-col justify-center items-center">
       <img width="120px" height="120px" class="fill-arbol-50" src="assets/imgs/nodata.svg" alt="Nenhum dado encontrado" />

@@ -1,18 +1,14 @@
-<div (click)="selectBranch(currentBranch.id)" *ngIf="currentBranch.id" class="tree-item" >
-  <div class="tree-item__content">
-    <div>
-      <div class="tree-item__content__arrow">
-        <ab-icon (click)="loadBranch(currentBranch.id)" [selected]="true" [icon]="arrowStatus" ></ab-icon>
-      </div>
-      <div class="tree-item__content__name">
-        <p>{{currentBranch.name}}</p>
-      </div>
+<div (click)="selectBranch(currentBranch.id)" *ngIf="currentBranch.id" [class]="' flex justify-between items-center px-4 py-1 cursor-pointer'">
+  <div class="flex gap-4">
+    <ab-icon (click)="loadBranch(currentBranch.id)" [icon]="arrowState"></ab-icon>
+    <div >
+      <p>{{currentBranch.name}}</p>
     </div>
-    <div>
-      <ab-button  use="fill">
-        <i class="bi bi-plus" ></i>
-      </ab-button>
-    </div>
+  </div>
+  <div>
+    <ab-button buttonStyle="clear">
+      <ab-icon icon="fas fa-plus"></ab-icon>
+    </ab-button>
   </div>
 </div>
 

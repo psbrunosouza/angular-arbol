@@ -1,19 +1,12 @@
 import {Component, forwardRef, Input, OnInit} from '@angular/core';
-import {NG_VALUE_ACCESSOR} from "@angular/forms";
+import {ControlValueAccessor, NG_VALUE_ACCESSOR} from "@angular/forms";
 
 @Component({
   selector: 'ab-input',
   templateUrl: './arbol-input.component.html',
   styleUrls: ['./arbol-input.component.scss'],
-  providers: [
-    {
-      provide: NG_VALUE_ACCESSOR,
-      useExisting: forwardRef(() => ArbolInputComponent),
-      multi: true
-    }
-  ]
 })
-export class ArbolInputComponent implements OnInit {
+export class ArbolInputComponent implements OnInit, ControlValueAccessor {
 
   @Input() data: string;
 
