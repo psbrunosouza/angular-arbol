@@ -5,25 +5,24 @@ import { DashboardRoutingModule } from './dashboard-routing.module';
 import { DashboardComponent } from './dashboard.component';
 import { TaskComponent } from './task/task.component';
 import {LayoutModule} from "../../@layout/layout.module";
-import {MarkdownModule} from "ngx-markdown";
-import {FormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {ComponentsModule} from "../../@components/components.module";
-import { MarkdownDisplayComponent } from './task/markdown-display/markdown-display.component';
+import {QuillModule} from "ngx-quill";
 
 
 @NgModule({
   declarations: [
     DashboardComponent,
     TaskComponent,
-    MarkdownDisplayComponent
   ],
   imports: [
     CommonModule,
     DashboardRoutingModule,
     LayoutModule,
-    MarkdownModule,
     FormsModule,
-    ComponentsModule
+    ComponentsModule,
+    QuillModule,
+    ReactiveFormsModule
   ]
 })
 export class DashboardModule { }

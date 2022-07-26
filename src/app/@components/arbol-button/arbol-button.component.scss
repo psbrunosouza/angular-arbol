@@ -1,61 +1,44 @@
-@import "../../@theme/theme";
-
-@mixin arbol-button--disabled {
-  &:disabled {
-    filter: brightness(0.7);
-  }
+.button-style-full {
+  @apply bg-arbol-400;
+  @apply text-white;
+  @apply hover:bg-arbol-500;
+  @apply transition-all;
+  @apply ease-in-out;
+  @apply duration-200;
 }
 
-.arbol-fill{
-  button {
-    width: 100%;
-    border: 1px solid $first-color;
-    background: $first-color;
-    outline: none;
-    color: $text-contrast-color;
-    border-radius: 2px;
-    text-transform: uppercase;
-    font-weight: bold;
-    transition: 0.2s;
-
-    &:hover {
-      filter: brightness(0.90);
-    }
-
-    @include arbol-button--disabled;
-  }
+.button-style-basic {
+  @apply bg-gray-100;
+  @apply text-gray-400;
+  @apply hover:bg-gray-200;
+  @apply transition-all;
+  @apply ease-in-out;
+  @apply duration-200;
 }
 
-.arbol-outline {
-  button {
-    width: 100%;
-    outline: none;
-    border: 1px solid $first-color;
-    color: $text-color;
-    background: transparent !important;
-    border-radius: 2px;
-    text-transform: uppercase;
-    font-weight: bold;
-    transition: 0.2s;
-
-    @include arbol-button--disabled;
-  }
+.button-style-clear {
+  @apply bg-transparent;
+  @apply text-arbol-400;
+  @apply hover:text-arbol-500;
+  @apply transition-all;
+  @apply ease-in-out;
+  @apply duration-200;
 }
 
-
-.arbol-link {
-  button {
-    width: 100%;
-    outline: none;
-    border: none;
-    color: $text-color;
-    background: transparent !important;
-    text-transform: uppercase;
-    font-weight: bold;
-    transition: 0.2s;
-
-    @include arbol-button--disabled;
-  }
+.button-style-success {
+  @apply bg-green-500;
+  @apply text-white;
+  @apply hover:bg-green-600;
+  @apply transition-all;
+  @apply ease-in-out;
+  @apply duration-200;
 }
 
-
+.button-style-danger {
+  @apply bg-red-500;
+  @apply text-white;
+  @apply hover:bg-red-600;
+  @apply transition-all;
+  @apply ease-in-out;
+  @apply duration-200;
+}

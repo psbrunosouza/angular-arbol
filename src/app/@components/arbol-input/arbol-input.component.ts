@@ -1,5 +1,5 @@
 import {Component, forwardRef, Input, OnInit} from '@angular/core';
-import {NG_VALUE_ACCESSOR} from "@angular/forms";
+import {ControlValueAccessor, NG_VALUE_ACCESSOR} from "@angular/forms";
 
 @Component({
   selector: 'ab-input',
@@ -13,17 +13,19 @@ import {NG_VALUE_ACCESSOR} from "@angular/forms";
     }
   ]
 })
-export class ArbolInputComponent implements OnInit {
+export class ArbolInputComponent implements OnInit, ControlValueAccessor {
 
-  @Input() public placeholder?: string;
+  @Input() data: string;
 
-  @Input() public type: "text" | "email" | "password" = "text";
+  @Input() label: string = '';
 
-  @Input() public required = false;
+  @Input() placeholder: string = '';
 
-  @Input() public disabled = false;
+  @Input() type: "text" | "email" | "password" = "text";
 
-  @Input() public data: string;
+  @Input() required = false;
+
+  @Input() disabled = false;
 
   constructor() {
   }
@@ -53,17 +55,5 @@ export class ArbolInputComponent implements OnInit {
 
   public onChange() {
     this.onChangeFn(this.data);
-  }
-
-  public togglePassword(): void {
-    switch (this.type){
-      case "text":
-        this.type = "password";
-        break;
-
-      case "password":
-        this.type = "text";
-        break;
-    }
   }
 }

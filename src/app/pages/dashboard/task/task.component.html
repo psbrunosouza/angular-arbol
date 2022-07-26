@@ -1,30 +1,10 @@
-<app-page>
-  <div header>
-    <app-header>
-      <ab-input-text (inputTextBlurEvent)="updateBranchName(branch)"  [(ngModel)]="branch.name" title></ab-input-text>
-      <div class="actions" actions>
-        <ab-button [disabled]="!branch.id" (click)="updateBranch(branch)" use="fill">
-          <ab-icon color="#fff" icon="bi bi-pencil-square"></ab-icon>
-        </ab-button>
-
-        <ab-button [disabled]="!branch.id" (click)="modal.changeModalVisibility()"  use="fill">
-          <ab-icon color="#fff" icon="bi bi-trash2"></ab-icon>
-        </ab-button>
-      </div>
-    </app-header>
-  </div>
-  <div *ngIf="branch.id">
-    <app-markdown-display  [active]="activeMarkdownContent" [data]="branch"></app-markdown-display>
-  </div>
+<app-page [title]="branch.name">
+  <quill-editor *ngIf="branch.id; else noData" id="task-encapsulation" [(ngModel)]="branch.description" [sanitize]="true" placeholder="Start here"></quill-editor>
+  <ng-template #noData>
+    <div class="flex h-full flex-col justify-center items-center">
+      <img width="120px" height="120px" class="fill-arbol-50" src="assets/imgs/nodata.svg" alt="Nenhum dado encontrado" />
+      <span class="italic text-black/60 text-center">Ops...<br/> Nenhuma tarefa aqui<br/> sinto muito.</span>
+    </div>
+  </ng-template>
 </app-page>
 
-<ab-modal size="medium" [isCompact]="false" #modal>
-  <ab-modal-header><ab-label><h5>Remover Tarefa</h5></ab-label></ab-modal-header>
-  <ab-modal-body>
-    <p>Tem certeza de que deseja remover essa tarefa?</p>
-  </ab-modal-body>
-  <ab-modal-footer class="ab-modal-footer">
-    <ab-button (click)="modal.changeModalVisibility()" type="button" class="me-3" use="link">Cancelar</ab-button>
-    <ab-button (click)="onSubmit(branch, modal)" type="button"  use="fill">Confirmar</ab-button>
-  </ab-modal-footer>
-</ab-modal>

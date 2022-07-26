@@ -1,18 +1,14 @@
-@import "src/app/@theme/theme";
+#task-encapsulation {
+  .ql-editor {
+    @apply h-[calc(100%-68px-68px)];
+    @apply md:h-[calc(100%-68px)];
+    @apply border-0;
+  }
 
-.actions {
-  display: flex;
-  gap: 16px;
+  .ql-toolbar {
+    @apply bg-white;
+    @apply border-0;
+  }
 }
 
-.title {
-  color: $text-color;
-}
-
-.ab-modal-footer {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  width: 100%;
-}
 

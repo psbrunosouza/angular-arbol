@@ -12,15 +12,9 @@ export class TreeViewComponent implements OnInit {
 
   leftSpacing: number = 12;
 
-  constructor() {
-  }
+  constructor() {}
 
-  ngOnInit(): void {
-  }
-
-  getSpacing(value: number): number {
-    return value;
-  }
+  ngOnInit(): void {}
 
   loadSelectedBranch(selectedBranch: BranchModel): void{
     !!this.branches && this.branches.forEach((branch, index) => {
@@ -39,7 +33,7 @@ export class TreeViewComponent implements OnInit {
   }
 
   onExpand(index: number): void{
-    this.branches[index].children
+    this.branches[index].children.length
       ? this.branches[index].expanded = !this.branches[index].expanded
       : this.branches[index].expanded = false;
   }

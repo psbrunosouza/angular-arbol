@@ -1,9 +1,8 @@
+<div class="w-full" *ngFor="let branch of branches">
+  <app-branch (branchEvent)="loadSelectedBranch($event)" [currentBranch]="branch"></app-branch>
 
-<div class="branch-list" *ngFor="let branch of branches">
-  <app-branch (branchEvent)="loadSelectedBranch($event)" [currentBranch]="branch" ></app-branch>
-
-    <div [style.margin-left.px]="branch.level + leftSpacing"  *ngIf="branch.children && branch.expanded">
-      <app-tree-view  [branches]="branch.children">
-      </app-tree-view>
-    </div>
+  <div [style.margin-left.px]="branch.level + leftSpacing" *ngIf="branch.children && branch.expanded">
+    <app-tree-view [branches]="branch.children">
+    </app-tree-view>
+  </div>
 </div>
