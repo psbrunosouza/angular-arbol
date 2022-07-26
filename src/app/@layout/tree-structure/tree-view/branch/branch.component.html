@@ -6,9 +6,36 @@
     </div>
   </div>
   <div>
-    <ab-button buttonStyle="clear">
+    <ab-button (click)="createBranchDialog.changeModalVisibility()" buttonStyle="clear">
       <ab-icon icon="fas fa-plus"></ab-icon>
     </ab-button>
   </div>
 </div>
+
+<ab-modal #createBranchDialog>
+  <ab-modal-header>
+    <h1 class="text-2xl font-bold">Criar tarefa</h1>
+  </ab-modal-header>
+  <ab-modal-body>
+    <div>
+      <ab-label>Título</ab-label>
+      <ab-input [(ngModel)]="branch.name" placeholder="nome da minha tarefa"></ab-input>
+    </div>
+    <div>
+      <quill-editor
+        [(ngModel)]="branch.description"
+        [sanitize]="true"
+        placeholder="Start here">
+      </quill-editor>
+    </div>
+  </ab-modal-body>
+  <ab-modal-footer>
+    <div class="flex gap-4 justify-end">
+      <ab-button buttonStyle="danger" (click)="createBranchDialog.changeModalVisibility()"><span><i
+        class="fas fa-times md:hidden"></i></span> <span class="hidden md:flex">Cancelar</span></ab-button>
+      <ab-button (click)="createBranch(this.branch, createBranchDialog)" buttonStyle="success"><span><i
+        class="fas fa-check md:hidden"></i></span> <span class="hidden md:flex">Confirmar</span></ab-button>
+    </div>
+  </ab-modal-footer>
+</ab-modal>
 

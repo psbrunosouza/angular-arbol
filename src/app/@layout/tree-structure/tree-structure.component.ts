@@ -26,10 +26,11 @@ export class TreeStructureComponent implements OnInit {
   loadBranches(): void {
     this.branchService.listRoots().subscribe((branches) => {
       this.branches = branches;
+      console.log(this.branches)
     })
   }
 
-  onSubmit(branch: BranchModel, ref: ArbolModalComponent): void {
+  createBranch(branch: BranchModel, ref: ArbolModalComponent): void {
     this.branchService.create(branch).subscribe(() => {
       ref.changeModalVisibility();
     })

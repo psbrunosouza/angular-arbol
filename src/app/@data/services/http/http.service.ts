@@ -9,6 +9,8 @@ import {IParams} from "./http.model";
 })
 export class HttpService {
 
+
+
   private httpHeaders = new HttpHeaders({
     Authorization: 'Bearer ' + this.ensureAuth.getToken(),
   });

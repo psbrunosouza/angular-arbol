@@ -45,15 +45,13 @@ export class BranchComponent implements OnInit {
     });
   }
 
-
-
   async selectBranch(id: number): Promise<void> {
     await this.router.navigate(['/dashboard/update-task', id])
   }
 
-  addBranch(onSubmit: ArbolModalComponent): void {
-    this.branchService.create({...this.branch, parent: this.currentBranch} as unknown as BranchModel).subscribe((branch) => {
-      onSubmit.changeModalVisibility();
+  createBranch(branch: BranchModel, modal: ArbolModalComponent): void {
+    this.branchService.create({...branch, branchId: this.currentBranch.id} as BranchModel).subscribe(() => {
+      modal.changeModalVisibility();
     })
   }
 }
