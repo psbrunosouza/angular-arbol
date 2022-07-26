@@ -1,4 +1,4 @@
-import {Component, ElementRef, Input, OnInit, Renderer2, ViewChild} from '@angular/core';
+import {Component, ElementRef, OnInit, Renderer2, ViewChild} from '@angular/core';
 
 @Component({
   selector: 'ab-modal',
@@ -7,21 +7,15 @@ import {Component, ElementRef, Input, OnInit, Renderer2, ViewChild} from '@angul
 })
 export class ArbolModalComponent implements OnInit {
 
-  @Input() isOpen: boolean = false;
+  isOpen: boolean = false;
 
-  @Input() isCompact: boolean = true;
-
-  @Input() size: 'large' | 'small' | 'medium' = 'medium';
+  get getIsOpen(): string {
+    return this.isOpen ? 'flex' : "hidden"
+  }
 
   @ViewChild('modal') modal: ElementRef;
 
-  get getSelectedSize(): string {
-    return `ab-modal-${this.size}`
-  }
-
-  constructor(private renderer: Renderer2) {
-
-  }
+  constructor(private renderer: Renderer2) {}
 
   ngOnInit(): void {
     this.renderer.listen("window", "click", (e: Event) => {

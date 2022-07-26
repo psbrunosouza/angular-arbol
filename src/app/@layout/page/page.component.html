@@ -1,6 +1,25 @@
 <div>
-  <ng-content select="[header]"></ng-content>
-</div>
-<div class="page">
-  <ng-content></ng-content>
+  <app-header >
+    <div class="flex justify-between">
+      <div class="flex">
+        <div class="md:hidden">
+          <ab-button (click)="openMenu()"  buttonStyle="clear">
+            <ab-icon icon="fas fa-bars"></ab-icon>
+          </ab-button>
+        </div>
+        <div class="flex items-center justify-center">
+          <ab-input [(ngModel)]="title"></ab-input>
+        </div>
+      </div>
+
+      <div class="flex gap-4">
+        <ab-button buttonStyle="full">
+          <ab-icon  icon="fas fa-trash"></ab-icon>
+        </ab-button>
+      </div>
+    </div>
+  </app-header>
+  <div class="h-[calc(100vh-68px-48px)] md:h-[calc(100vh-48px)] md:w-[calc(100vw-64px-280px)] bg-gray-100">
+    <ng-content></ng-content>
+  </div>
 </div>

@@ -15,6 +15,11 @@ export class ArbolIconComponent implements OnInit {
 
   @Input() public selected?: boolean = false;
 
+  get getStyle(): string {
+    return `${this.icon} w-[${this.size}px] h-[${this.size}px] text-[${this.size}px]`
+  }
+
+
   constructor() { }
 
   ngOnInit(): void {

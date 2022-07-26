@@ -17,14 +17,19 @@ export class BranchComponent implements OnInit {
 
   @Output() branchEvent: EventEmitter<BranchModel> = new EventEmitter<BranchModel>();
 
-  arrowStatusList = {
-    active: "bi bi-caret-down-fill",
-    inactive: "bi bi-caret-right-fill"
-  }
-
   isActive: boolean = false;
 
-  arrowStatus: string = this.arrowStatusList["inactive"];
+  arrowState: string = "fas fa-arrow-right";
+
+  get activateBranchArrow(): string {
+    if(this.currentBranch?.children && this.currentBranch?.children?.length){
+      this.isActive = !this.isActive
+    }
+
+    return this.isActive
+      ?  "fas fa-arrow-down"
+      : "fas fa-arrow-right";
+  }
 
   constructor(private branchService: BranchService, private router: Router) { }
 
@@ -35,29 +40,18 @@ export class BranchComponent implements OnInit {
   loadBranch(id: number): void {
     this.branchService.show(id).subscribe(branch => {
       this.currentBranch = branch;
-      this.arrowStatus = this.activateBranchArrow();
+      this.arrowState = this.activateBranchArrow;
       this.branchEvent.emit(this.currentBranch);
     });
   }
 
-  activateBranchArrow(): string {
-    if(!!this.currentBranch.children.length){
-      this.isActive = !this.isActive
-    }
-
-    return this.isActive
-      ? this.arrowStatusList["active"]
-      : this.arrowStatusList["inactive"];
+  async selectBranch(id: number): Promise<void> {
+    await this.router.navigate(['/dashboard/update-task', id])
   }
 
-  selectBranch(id: number): void{
-    this.router.navigate(['/dashboard/update-task', id])
-  }
-
-  addBranch(onSubmit: ArbolModalComponent): void {
-    this.branchService.create({...this.branch, parent: this.currentBranch} as unknown as BranchModel).subscribe((branch) => {
-      console.log(branch);
-      onSubmit.changeModalVisibility();
+  createBranch(branch: BranchModel, modal: ArbolModalComponent): void {
+    this.branchService.create({...branch, branchId: this.currentBranch.id} as BranchModel).subscribe(() => {
+      modal.changeModalVisibility();
     })
   }
 }

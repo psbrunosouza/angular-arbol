@@ -1,0 +1,8 @@
+<div class="my-3 flex items-center gap-2">
+  <label *ngIf="labelPosition === 'left'">{{label}}</label>
+  <label for="checkbox" [ngClass]="'cursor-pointer transition-all ease-in-out duration-500 flex items-center justify-center checkbox checkbox--' + getCheckboxStyle">
+    <i *ngIf="data" class="checkbox-mark transition-all ease-in-out duration-500 fas fa-check"></i>
+    <input id="checkbox" [(ngModel)]="data" class="hidden" type="checkbox"/>
+  </label>
+  <label *ngIf="labelPosition === 'right'">{{label}}</label>
+</div>

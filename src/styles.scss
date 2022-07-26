@@ -1,4 +1,7 @@
-@import "~bootstrap-icons/font/bootstrap-icons.css";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import '~quill/dist/quill.snow.css';
 
 root {
   color: var(--text-color);

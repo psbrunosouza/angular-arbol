@@ -13,7 +13,6 @@ export class BranchModel extends DefaultModel {
   description?: string;
   level: number;
   expanded?: boolean;
-  childrenQtd?: number;
   parent: UserModel;
 }
 

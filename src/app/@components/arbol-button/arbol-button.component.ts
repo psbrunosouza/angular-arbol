@@ -1,30 +1,26 @@
 import {Component, Input, OnInit} from '@angular/core';
 
-type TType = "button" | "submit";
-type TUse = "fill" | "link" | "outline";
+type IButtonType = "button" | "submit" | "reset";
+
+type IButtonStyle = "full" | "basic" | "success" | "danger" | "clear";
 
 @Component({
   selector: 'ab-button',
   templateUrl: './arbol-button.component.html',
-  styleUrls: ['./arbol-button.component.scss']
+  styleUrls: ['./arbol-button.component.scss'],
+
 })
 export class ArbolButtonComponent implements OnInit {
 
-  @Input() public type?: TType = "submit";
+  @Input() public type: IButtonType = "submit";
 
-  @Input() public use?: TUse = "fill";
+  @Input() public disabled: boolean = false;
 
-  @Input() public background?: string;
+  @Input() public buttonStyle: IButtonStyle = 'full';
 
-  @Input() public borderColor?: string;
-
-  @Input() public borderRadius?: number;
-
-  @Input() public borderWidth?: number;
-
-  @Input() public color?: string;
-
-  @Input() public disabled?: boolean = false;
+  get getButtonStyle(): string {
+    return `button-style-${this.buttonStyle}`
+  }
 
   constructor() { }
 

@@ -1,7 +1,15 @@
-<div class="page">
-  <app-sidebar></app-sidebar>
-  <app-tree-structure></app-tree-structure>
-  <div class="w-100">
-    <router-outlet></router-outlet>
+<div class="flex overflow-hidden relative">
+  <app-sidebar class="hidden md:flex"></app-sidebar>
+  <app-tree-structure class="hidden md:flex"></app-tree-structure>
+  <div class="w-full">
+    <div>
+      <router-outlet></router-outlet>
+    </div>
+    <app-sidebar class="md:hidden"></app-sidebar>
+  </div>
+  <div [@slidebg]="menuStateTransition" #menuBody [class]="' md:hidden w-full h-screen absolute bg-black opacity-60'"></div>
+  <div [@slide]="menuStateTransition" [class]="' md:hidden absolute h-screen  w-[280px] bg-white'">
+    <app-tree-structure  class="md:hidden"></app-tree-structure>
   </div>
 </div>
+

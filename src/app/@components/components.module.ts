@@ -14,6 +14,7 @@ import { ArbolModalFooterComponent } from './arbol-modal/arbol-modal-footer/arbo
 import { ArbolTextareaComponent } from './arbol-textarea/arbol-textarea.component';
 import { ArbolContentHeaderComponent } from './arbol-content-header/arbol-content-header.component';
 import { ArbolInputTextComponent } from './arbol-input-text/arbol-input-text.component';
+import { ArbolCheckboxComponent } from './arbol-checkbox/arbol-checkbox.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { ArbolInputTextComponent } from './arbol-input-text/arbol-input-text.com
     ArbolTextareaComponent,
     ArbolContentHeaderComponent,
     ArbolInputTextComponent,
+    ArbolCheckboxComponent,
   ],
   imports: [
     CommonModule,
@@ -47,7 +49,8 @@ import { ArbolInputTextComponent } from './arbol-input-text/arbol-input-text.com
     ArbolModalBodyComponent,
     ArbolTextareaComponent,
     ArbolContentHeaderComponent,
-    ArbolInputTextComponent
+    ArbolInputTextComponent,
+    ArbolCheckboxComponent
   ]
 })
 export class ComponentsModule {

@@ -1,25 +1,39 @@
-<div class="branch-set-container">
-  <div class="add-branch mb-4">
-    <ab-button  type="button" (click)="modalAddBranch.changeModalVisibility()">
-      Adicionar
-    </ab-button>
-  </div>
+<span id="task-encapsulation-d">
+  <main class="w-[280px]">
+    <section class="p-4">
+      <ab-button (click)="createBranchDialog.changeModalVisibility()" type="button">
+        Adicionar
+      </ab-button>
+    </section>
+    <section>
+      <app-tree-view  [branches]="branches"></app-tree-view>
+    </section>
+  </main>
 
-  <div class="multi-dimensional-branch-view">
-    <app-tree-view  [branches]="branches"></app-tree-view>
-  </div>
-
-  <ab-modal size="medium" [isCompact]="false" #modalAddBranch>
-    <ab-modal-header><ab-label><h5>Criar novo tarefa</h5></ab-label></ab-modal-header>
+  <ab-modal #createBranchDialog>
+    <ab-modal-header>
+      <h1 class="text-2xl font-bold">Criar tarefa</h1>
+    </ab-modal-header>
     <ab-modal-body>
-      <ab-input name="name" [(ngModel)]="branch.name" placeholder="Título"></ab-input>
-      <ab-textarea name="description" [(ngModel)]="branch.description" placeholder="# Anotações..."></ab-textarea>
+      <div>
+        <ab-label>Título</ab-label>
+        <ab-input [(ngModel)]="branch.name" placeholder="nome da minha tarefa"></ab-input>
+      </div>
+      <div>
+        <quill-editor
+          [(ngModel)]="branch.description"
+          [sanitize]="true"
+          placeholder="Start here">
+        </quill-editor>
+      </div>
     </ab-modal-body>
-    <ab-modal-footer class="ab-modal-footer">
-      <ab-button (click)="modalAddBranch.changeModalVisibility()" type="button" class="me-3" use="link">Cancelar</ab-button>
-      <ab-button (click)="onSubmit(modalAddBranch)" type="button"  use="fill">Confirmar</ab-button>
+    <ab-modal-footer>
+      <div class="flex gap-4 justify-end">
+        <ab-button buttonStyle="danger" (click)="createBranchDialog.changeModalVisibility()"><span><i
+          class="fas fa-times md:hidden"></i></span> <span class="hidden md:flex">Cancelar</span></ab-button>
+        <ab-button (click)="createBranch(branch, createBranchDialog)" buttonStyle="success"><span><i
+          class="fas fa-check md:hidden"></i></span> <span class="hidden md:flex">Confirmar</span></ab-button>
+      </div>
     </ab-modal-footer>
   </ab-modal>
-</div>
-
-
+</span>
