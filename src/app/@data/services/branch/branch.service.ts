@@ -13,7 +13,11 @@ export class BranchService implements IBranchService{
 
   url = '/branches';
 
-  branch$: Subject<BranchModel> = new Subject();
+  reloadListOfTasks$: Subject<boolean> = new Subject<boolean>();
+
+  set reloadListOfTasks(value: boolean) {
+    this.reloadListOfTasks$.next(value);
+  }
 
   constructor(private http: HttpService) {
   }

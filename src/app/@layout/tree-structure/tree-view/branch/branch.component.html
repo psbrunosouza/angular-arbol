@@ -5,12 +5,32 @@
       <p>{{currentBranch.name}}</p>
     </div>
   </div>
-  <div>
+  <div class="flex justify-between">
+    <ab-button (click)="deleteBranchDialog.changeModalVisibility()" buttonStyle="clear">
+      <ab-icon icon="fas fa-trash"></ab-icon>
+    </ab-button>
     <ab-button (click)="createBranchDialog.changeModalVisibility()" buttonStyle="clear">
       <ab-icon icon="fas fa-plus"></ab-icon>
     </ab-button>
   </div>
 </div>
+
+<ab-modal #deleteBranchDialog>
+  <ab-modal-header>
+    <h1 class="text-2xl font-bold">Remover tarefa</h1>
+  </ab-modal-header>
+  <ab-modal-body>
+    Tem certeza de que deseja remover a tarefa selecionada ?
+  </ab-modal-body>
+  <ab-modal-footer>
+    <div class="flex gap-4 justify-end">
+      <ab-button buttonStyle="danger" (click)="deleteBranchDialog.changeModalVisibility()"><span><i
+        class="fas fa-times md:hidden"></i></span> <span class="hidden md:flex">Cancelar</span></ab-button>
+      <ab-button (click)="deleteBranch(this.currentBranch.id, deleteBranchDialog)" buttonStyle="success"><span><i
+        class="fas fa-check md:hidden"></i></span> <span class="hidden md:flex">Confirmar</span></ab-button>
+    </div>
+  </ab-modal-footer>
+</ab-modal>
 
 <ab-modal #createBranchDialog>
   <ab-modal-header>

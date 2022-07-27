@@ -1,21 +1,14 @@
 <div>
-  <app-header >
-    <div class="flex justify-between">
-      <div class="flex">
-        <div class="md:hidden">
-          <ab-button (click)="openMenu()"  buttonStyle="clear">
-            <ab-icon icon="fas fa-bars"></ab-icon>
-          </ab-button>
-        </div>
-        <div class="flex items-center justify-center">
-          <ab-input [(ngModel)]="title"></ab-input>
-        </div>
+  <app-header>
+    <div class="flex h-[64px] justify-between">
+      <div class="md:hidden">
+        <ab-button (click)="openMenu()"  buttonStyle="clear">
+          <ab-icon icon="fas fa-bars"></ab-icon>
+        </ab-button>
       </div>
 
-      <div class="flex gap-4">
-        <ab-button buttonStyle="full">
-          <ab-icon  icon="fas fa-trash"></ab-icon>
-        </ab-button>
+      <div class="h-full ml-2 flex items-center">
+        <h2>{{title}}</h2>
       </div>
     </div>
   </app-header>

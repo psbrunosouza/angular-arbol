@@ -1,7 +1,8 @@
-import {Component, OnInit, ViewEncapsulation} from '@angular/core';
+import {Component, Input, OnInit, ViewEncapsulation} from '@angular/core';
 import {BranchModel} from "../../../@data/models/branch.model";
 import {BranchService} from "../../../@data/services/branch/branch.service";
 import {ActivatedRoute} from "@angular/router";
+import {MenuService} from "../../../@data/services/subjects/menu/menu.service";
 
 @Component({
   selector: 'app-task',
@@ -22,11 +23,10 @@ export class TaskComponent implements OnInit {
   ngOnInit(): void {
     this.branch = new BranchModel();
 
-    this.activatedRoute.params.subscribe(params => {
-      if(!!params.id) this.branchService.show(params["id"]).subscribe((data) => {
+    this.activatedRoute.params.subscribe(({id}) => {
+      if(!!id) this.branchService.show(id).subscribe((data) => {
         this.branch = data;
       });
     });
   }
-
 }

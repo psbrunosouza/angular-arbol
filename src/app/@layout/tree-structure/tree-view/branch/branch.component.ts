@@ -51,7 +51,15 @@ export class BranchComponent implements OnInit {
 
   createBranch(branch: BranchModel, modal: ArbolModalComponent): void {
     this.branchService.create({...branch, branchId: this.currentBranch.id} as BranchModel).subscribe(() => {
+      this.branchService.reloadListOfTasks = true;
       modal.changeModalVisibility();
+    })
+  }
+
+  deleteBranch(id: number, ref: ArbolModalComponent): void {
+    this.branchService.delete(id).subscribe(() => {
+      this.branchService.reloadListOfTasks = true;
+      ref.changeModalVisibility();
     })
   }
 }
