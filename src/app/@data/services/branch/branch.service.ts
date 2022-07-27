@@ -13,12 +13,6 @@ export class BranchService implements IBranchService{
 
   url = '/branches';
 
-  reloadListOfTasks$: Subject<boolean> = new Subject<boolean>();
-
-  set reloadListOfTasks(value: boolean) {
-    this.reloadListOfTasks$.next(value);
-  }
-
   constructor(private http: HttpService) {
   }
 

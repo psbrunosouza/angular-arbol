@@ -1,4 +1,4 @@
-import {Component, forwardRef, Input, OnInit} from '@angular/core';
+import {Component, EventEmitter, forwardRef, Input, OnInit, Output} from '@angular/core';
 import {ControlValueAccessor, NG_VALUE_ACCESSOR} from "@angular/forms";
 
 @Component({
@@ -27,6 +27,8 @@ export class ArbolInputComponent implements OnInit, ControlValueAccessor {
 
   @Input() disabled = false;
 
+  @Output() blur: EventEmitter<string> = new EventEmitter<string>();
+
   constructor() {
   }
 
@@ -35,14 +37,14 @@ export class ArbolInputComponent implements OnInit, ControlValueAccessor {
 
   public onChangeFn = (_: any) => {};
 
-  public onTouchedFn = () => {};
+  public onTouch: any = () => {};
 
   public registerOnChange(fn: any): void {
     this.onChangeFn = fn;
   }
 
   public registerOnTouched(fn: any): void {
-    this.onTouchedFn = fn;
+    this.onTouch = fn;
   }
 
   public setDisabledState(isDisabled: boolean): void {
@@ -51,6 +53,11 @@ export class ArbolInputComponent implements OnInit, ControlValueAccessor {
 
   public writeValue(obj: any): void {
     this.data = obj;
+  }
+
+  public onBlur() {
+    this.onTouch();
+    this.blur.emit(this.data);
   }
 
   public onChange() {

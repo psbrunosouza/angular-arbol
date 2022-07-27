@@ -1,8 +1,8 @@
 <div (click)="selectBranch(currentBranch.id)" *ngIf="currentBranch.id" [class]="' flex justify-between items-center px-4 py-1 cursor-pointer'">
   <div class="flex gap-4">
     <ab-icon (click)="loadBranch(currentBranch.id)" [icon]="arrowState"></ab-icon>
-    <div >
-      <p>{{currentBranch.name}}</p>
+    <div>
+      <ab-input (blur)="updateTask(currentBranch)" [(ngModel)]="currentBranch.name"></ab-input>
     </div>
   </div>
   <div class="flex justify-between">

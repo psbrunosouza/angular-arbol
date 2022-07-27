@@ -11,10 +11,6 @@ const routes: Routes = [
   {
     path: 'task',
     component: TaskComponent
-  },
-  {
-    path: 'update-task/:id',
-    component: TaskComponent
   }
 ];
 

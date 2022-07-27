@@ -1,9 +1,10 @@
-<app-page [title]="!!branch.name ? branch.name : ''">
+<app-page [title]="!!branch?.name ? branch.name : ''">
   <quill-editor
-    *ngIf="branch.id;
+    *ngIf="branch?.id;
     else noData"
     id="task-encapsulation"
-    [(ngModel)]="branch.description"
+    [ngModel]="branch?.description"
+    (ngModelChange)="branch.description = $event"
     [sanitize]="true"
     placeholder="Start here">
   </quill-editor>

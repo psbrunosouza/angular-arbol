@@ -1,5 +1,4 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {UrlTree} from "@angular/router";
 
 @Component({
   selector: 'ab-link',

@@ -1,13 +1,9 @@
 import {
-  AfterViewInit,
   Component,
-  ElementRef, EventEmitter,
-  forwardRef,
   Input,
-  OnInit,
   Output,
-  Renderer2,
-  ViewChild
+  EventEmitter,
+  OnInit, forwardRef,
 } from '@angular/core';
 import {ControlValueAccessor, NG_VALUE_ACCESSOR} from "@angular/forms";
 
@@ -15,6 +11,13 @@ import {ControlValueAccessor, NG_VALUE_ACCESSOR} from "@angular/forms";
   selector: 'ab-input-text',
   templateUrl: './arbol-input-text.component.html',
   styleUrls: ['./arbol-input-text.component.scss'],
+  providers: [
+    {
+      provide: NG_VALUE_ACCESSOR,
+      useExisting: forwardRef(() => ArbolInputTextComponent),
+      multi: true
+    }
+  ]
 })
 export class ArbolInputTextComponent implements OnInit, ControlValueAccessor {
 
