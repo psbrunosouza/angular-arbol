@@ -32,7 +32,11 @@ export class BranchComponent implements OnInit {
       : "fas fa-arrow-right";
   }
 
-  constructor(private branchService: BranchService, private branchReloadService: BranchReloadService, private router: Router) { }
+  constructor(
+    private branchService: BranchService,
+    private branchReloadService: BranchReloadService,
+    private router: Router
+  ) { }
 
   ngOnInit(): void {
     this.branch = new BranchModel();

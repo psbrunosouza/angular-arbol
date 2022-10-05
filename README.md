@@ -12,7 +12,7 @@ aplicações.
 ### Arvore de tarefas
 
 <div style="display: flex; justify-content: center; align-items: center">
-  <img alt="" src="src/assets/git-readme-images/apresentacao_arbol_notes.gif"/>
+  <img alt="" width="200px" height="200px" src="src/assets/git-readme-images/apresentacao_arbol_notes.gif"/>
 </div>  
 
 ### Sistema de temas
